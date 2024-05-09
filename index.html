@@ -3,32 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <title>月別成績リダイレクト</title>
+<style>
+    button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+</style>
 </head>
 <body>
 <h1>月別成績ページへのリンク</h1>
-<select id="monthSelect" onchange="redirectToScorePage()">
-  <option value="">月を選択してください</option>
-  <option value="score_jan.html">1月</option>
-  <option value="score_feb.html">2月</option>
-  <option value="score_mar.html">3月</option>
-  <option value="score_apr.html">4月</option>
-  <option value="score_may.html">5月</option>
-  <option value="score_jun.html">6月</option>
-  <option value="score_jul.html">7月</option>
-  <option value="score_aug.html">8月</option>
-  <option value="score_sep.html">9月</option>
-  <option value="score_oct.html">10月</option>
-  <option value="score_nov.html">11月</option>
-  <option value="score_dec.html">12月</option>
-</select>
-
-<script>
-function redirectToScorePage() {
-  var selectedMonthFile = document.getElementById('monthSelect').value;
-  if (selectedMonthFile) {
-    window.location.href = selectedMonthFile;
-  }
-}
-</script>
+<div>
+    <button onclick="location.href='score_jan.html'">1月</button>
+    <button onclick="location.href='score_feb.html'">2月</button>
+    <button onclick="location.href='score_mar.html'">3月</button>
+    <button onclick="location.href='score_apr.html'">4月</button>
+    <button onclick="location.href='score_may.html'">5月</button>
+    <button onclick="location.href='score_jun.html'">6月</button>
+    <button onclick="location.href='score_jul.html'">7月</button>
+    <button onclick="location.href='score_aug.html'">8月</button>
+    <button onclick="location.href='score_sep.html'">9月</button>
+    <button onclick="location.href='score_oct.html'">10月</button>
+    <button onclick="location.href='score_nov.html'">11月</button>
+    <button onclick="location.href='score_dec.html'">12月</button>
+</div>
 </body>
 </html>
