@@ -1,44 +1,831 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="utf-8">
-  <title>mmm</title>
-  <style>
-    ol {
-      text-align: center;
-    }
-    .top1 {
-      font-size: 800%;
-      font-weight: bold;
-      color: gold;
-    }
-
-    .top2 {
-      font-size: 600%;
-      font-weight: bold;
-      color: silver;
-    }
-
-    .top3 {
-      font-size: 400%;
-      font-weight: bold;
-      color: #CD7F32
-    }
-
-    .top10 {
-      font-size: 200%;
-    }
+    <meta charset="UTF-8">
+    <title>成績表</title>
+    <style>
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 0 1em 0;
+            font-size: 0.9em;
+        }
+        .responsive-table th,
+        .responsive-table td {
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .responsive-table thead {
+            background-color: #f2f2f2;
+        }
+        .responsive-table tbody tr:nth-child(odd) {
+            background-color: #fdfdfd;
+        }
+        .responsive-table tbody tr:nth-child(even) {
+            background-color: #eff0f1;
+        }
+        @media (max-width: 600px) {
+            .responsive-table th,
+            .responsive-table td {
+                padding: 0.2em;
+            }
+            .responsive-table {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
 <body>
-  <h1>成績</h1>
-  <ol>
-    <li class="top1">山田 200p</li>
-    <li class="top2">佐藤 180p</li>
-    <li class="top3">田中 160p</li>
-    <li class="top10">松尾 100p</li>
-    <li class="top10">伊達 55p</li>
-  </ol>
+    <table class="responsive-table">
+        <caption>成績</caption>
+        <thead>
+            <tr>
+                <th>名前</th>
+                <th>１位</th>
+                <th>２位</th>
+                <th>３位</th>
+                <th>ラス</th>
+                <th>レート</th>
+                <th>打回数</th>
+                <th>TOP率</th>
+                <th>連帯率</th>
+                <th>ラス率</th>
+                <th>平均着順</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr class="even">
+<td>樋口</td>
+<td>19</td>
+<td>20</td>
+<td>22</td>
+<td>5</td>
+<td>3155</td>
+<td>66</td>
+<td>0.287878788</td>
+<td>0.590909091</td>
+<td>0.075757576</td>
+<td>2.196969697</td>
+</tr>
+
+<tr class="odd">
+<td>ワタナベ</td>
+<td>27</td>
+<td>14</td>
+<td>7</td>
+<td>13</td>
+<td>2626</td>
+<td>61</td>
+<td>0.442622951</td>
+<td>0.672131148</td>
+<td>0.213114754</td>
+<td>2.098360656</td>
+</tr>
+
+<tr class="even">
+<td>橋本</td>
+<td>45</td>
+<td>28</td>
+<td>21</td>
+<td>32</td>
+<td>2610</td>
+<td>126</td>
+<td>0.357142857</td>
+<td>0.579365079</td>
+<td>0.253968254</td>
+<td>2.317460317</td>
+</tr>
+
+<tr class="odd">
+<td>しのはら</td>
+<td>10</td>
+<td>10</td>
+<td>7</td>
+<td>6</td>
+<td>2579</td>
+<td>33</td>
+<td>0.303030303</td>
+<td>0.606060606</td>
+<td>0.181818182</td>
+<td>2.272727273</td>
+</tr>
+
+<tr class="even">
+<td>まっさん</td>
+<td>18</td>
+<td>11</td>
+<td>12</td>
+<td>9</td>
+<td>2516</td>
+<td>50</td>
+<td>0.36</td>
+<td>0.58</td>
+<td>0.18</td>
+<td>2.24</td>
+</tr>
+
+<tr class="odd">
+<td>ポテチ</td>
+<td>6</td>
+<td>3</td>
+<td>5</td>
+<td>1</td>
+<td>2501</td>
+<td>15</td>
+<td>0.4</td>
+<td>0.6</td>
+<td>0.066666667</td>
+<td>2.066666667</td>
+</tr>
+
+<tr class="even">
+<td>川口</td>
+<td>17</td>
+<td>19</td>
+<td>14</td>
+<td>19</td>
+<td>2495</td>
+<td>69</td>
+<td>0.246376812</td>
+<td>0.52173913</td>
+<td>0.275362319</td>
+<td>2.507246377</td>
+</tr>
+
+<tr class="odd">
+<td>あっこ</td>
+<td>5</td>
+<td>2</td>
+<td>0</td>
+<td>4</td>
+<td>2402</td>
+<td>11</td>
+<td>0.454545455</td>
+<td>0.636363636</td>
+<td>0.363636364</td>
+<td>2.272727273</td>
+</tr>
+
+<tr class="even">
+<td>かん</td>
+<td>9</td>
+<td>16</td>
+<td>7</td>
+<td>12</td>
+<td>2375</td>
+<td>44</td>
+<td>0.204545455</td>
+<td>0.568181818</td>
+<td>0.272727273</td>
+<td>2.5</td>
+</tr>
+
+<tr class="odd">
+<td>久保</td>
+<td>5</td>
+<td>9</td>
+<td>8</td>
+<td>5</td>
+<td>2317</td>
+<td>27</td>
+<td>0.185185185</td>
+<td>0.518518519</td>
+<td>0.185185185</td>
+<td>2.481481481</td>
+</tr>
+
+<tr class="even">
+<td>ぺいぺい</td>
+<td>22</td>
+<td>19</td>
+<td>17</td>
+<td>17</td>
+<td>2308</td>
+<td>75</td>
+<td>0.293333333</td>
+<td>0.546666667</td>
+<td>0.226666667</td>
+<td>2.386666667</td>
+</tr>
+
+<tr class="odd">
+<td>シャチ</td>
+<td>7</td>
+<td>11</td>
+<td>13</td>
+<td>10</td>
+<td>2207</td>
+<td>41</td>
+<td>0.170731707</td>
+<td>0.43902439</td>
+<td>0.243902439</td>
+<td>2.634146341</td>
+</tr>
+
+<tr class="even">
+<td>たれ目</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>0</td>
+<td>2183</td>
+<td>7</td>
+<td>0.428571429</td>
+<td>0.571428571</td>
+<td>0</td>
+<td>2</td>
+</tr>
+
+<tr class="odd">
+<td>ゴトウ</td>
+<td>18</td>
+<td>19</td>
+<td>15</td>
+<td>13</td>
+<td>2176</td>
+<td>65</td>
+<td>0.276923077</td>
+<td>0.569230769</td>
+<td>0.2</td>
+<td>2.353846154</td>
+</tr>
+
+<tr class="even">
+<td>御堂</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>2170</td>
+<td>12</td>
+<td>0.166666667</td>
+<td>0.416666667</td>
+<td>0.333333333</td>
+<td>2.75</td>
+</tr>
+
+<tr class="odd">
+<td>ごんべ</td>
+<td>12</td>
+<td>13</td>
+<td>22</td>
+<td>12</td>
+<td>2144</td>
+<td>59</td>
+<td>0.203389831</td>
+<td>0.423728814</td>
+<td>0.203389831</td>
+<td>2.576271186</td>
+</tr>
+
+<tr class="even">
+<td>つつみ</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>2112</td>
+<td>4</td>
+<td>0.25</td>
+<td>0.5</td>
+<td>0</td>
+<td>2.25</td>
+</tr>
+
+<tr class="odd">
+<td>まつお</td>
+<td>8</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>2103</td>
+<td>12</td>
+<td>0.666666667</td>
+<td>0.833333333</td>
+<td>0.083333333</td>
+<td>1.583333333</td>
+</tr>
+
+<tr class="even">
+<td>よなは</td>
+<td>4</td>
+<td>2</td>
+<td>5</td>
+<td>4</td>
+<td>2103</td>
+<td>15</td>
+<td>0.266666667</td>
+<td>0.4</td>
+<td>0.266666667</td>
+<td>2.6</td>
+</tr>
+
+<tr class="odd">
+<td>たかちゃん</td>
+<td>10</td>
+<td>6</td>
+<td>4</td>
+<td>10</td>
+<td>2101</td>
+<td>30</td>
+<td>0.333333333</td>
+<td>0.533333333</td>
+<td>0.333333333</td>
+<td>2.466666667</td>
+</tr>
+
+<tr class="even">
+<td>りょうや</td>
+<td>3</td>
+<td>4</td>
+<td>1</td>
+<td>2</td>
+<td>2086</td>
+<td>10</td>
+<td>0.3</td>
+<td>0.7</td>
+<td>0.2</td>
+<td>2.2</td>
+</tr>
+
+<tr class="odd">
+<td>吉野</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>2078</td>
+<td>8</td>
+<td>0.125</td>
+<td>0.5</td>
+<td>0.125</td>
+<td>2.5</td>
+</tr>
+
+<tr class="even">
+<td>しょうの</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>2066</td>
+<td>4</td>
+<td>0.5</td>
+<td>0.75</td>
+<td>0</td>
+<td>1.75</td>
+</tr>
+
+<tr class="odd">
+<td>緒方プロ</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2064</td>
+<td>3</td>
+<td>0.333333333</td>
+<td>0.333333333</td>
+<td>0.666666667</td>
+<td>3</td>
+</tr>
+
+<tr class="even">
+<td>はたしょう</td>
+<td>1</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>2062</td>
+<td>4</td>
+<td>0.25</td>
+<td>1</td>
+<td>0</td>
+<td>1.75</td>
+</tr>
+
+<tr class="odd">
+<td>ゆき</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2040</td>
+<td>2</td>
+<td>0.5</td>
+<td>1</td>
+<td>0</td>
+<td>1.5</td>
+</tr>
+
+<tr class="even">
+<td>薬師寺</td>
+<td>21</td>
+<td>27</td>
+<td>20</td>
+<td>19</td>
+<td>2026</td>
+<td>87</td>
+<td>0.24137931</td>
+<td>0.551724138</td>
+<td>0.218390805</td>
+<td>2.425287356</td>
+</tr>
+
+<tr class="odd">
+<td>松本</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>2022</td>
+<td>4</td>
+<td>0</td>
+<td>0.75</td>
+<td>0</td>
+<td>2.25</td>
+</tr>
+
+<tr class="even">
+<td>押川</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2018</td>
+<td>7</td>
+<td>0.285714286</td>
+<td>0.571428571</td>
+<td>0.285714286</td>
+<td>2.428571429</td>
+</tr>
+
+<tr class="odd">
+<td>パンドラ</td>
+<td>5</td>
+<td>9</td>
+<td>12</td>
+<td>7</td>
+<td>2017</td>
+<td>33</td>
+<td>0.151515152</td>
+<td>0.424242424</td>
+<td>0.212121212</td>
+<td>2.636363636</td>
+</tr>
+
+<tr class="even">
+<td>イワイ</td>
+<td>11</td>
+<td>15</td>
+<td>16</td>
+<td>8</td>
+<td>2009</td>
+<td>50</td>
+<td>0.22</td>
+<td>0.52</td>
+<td>0.16</td>
+<td>2.42</td>
+</tr>
+
+<tr class="odd">
+<td>向後</td>
+<td>8</td>
+<td>8</td>
+<td>13</td>
+<td>7</td>
+<td>2008</td>
+<td>36</td>
+<td>0.222222222</td>
+<td>0.444444444</td>
+<td>0.194444444</td>
+<td>2.527777778</td>
+</tr>
+
+<tr class="even">
+<td>カトウ</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>2006</td>
+<td>4</td>
+<td>0.25</td>
+<td>0.25</td>
+<td>0</td>
+<td>2.5</td>
+</tr>
+
+<tr class="odd">
+<td>和田</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1990</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+</tr>
+
+<tr class="even">
+<td>木村</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>1987</td>
+<td>15</td>
+<td>0.266666667</td>
+<td>0.466666667</td>
+<td>0.266666667</td>
+<td>2.533333333</td>
+</tr>
+
+<tr class="odd">
+<td>よしなか</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>1980</td>
+<td>8</td>
+<td>0.25</td>
+<td>0.5</td>
+<td>0.375</td>
+<td>2.625</td>
+</tr>
+
+<tr class="even">
+<td>おぐら</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>1979</td>
+<td>3</td>
+<td>0</td>
+<td>0.333333333</td>
+<td>0.666666667</td>
+<td>3.333333333</td>
+</tr>
+
+<tr class="odd">
+<td>アベ</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>1973</td>
+<td>7</td>
+<td>0.142857143</td>
+<td>0.285714286</td>
+<td>0.142857143</td>
+<td>2.714285714</td>
+</tr>
+
+<tr class="even">
+<td>甲斐</td>
+<td>0</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+<td>1972</td>
+<td>7</td>
+<td>0</td>
+<td>0.571428571</td>
+<td>0.142857143</td>
+<td>2.571428571</td>
+</tr>
+
+<tr class="odd">
+<td>ナオ</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>1970</td>
+<td>20</td>
+<td>0.25</td>
+<td>0.45</td>
+<td>0.3</td>
+<td>2.6</td>
+</tr>
+
+<tr class="even">
+<td>よこやま</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1970</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+</tr>
+
+<tr class="odd">
+<td>ふじさわ</td>
+<td>17</td>
+<td>10</td>
+<td>14</td>
+<td>20</td>
+<td>1960</td>
+<td>61</td>
+<td>0.278688525</td>
+<td>0.442622951</td>
+<td>0.327868852</td>
+<td>2.606557377</td>
+</tr>
+
+<tr class="even">
+<td>さな</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>1960</td>
+<td>4</td>
+<td>0.25</td>
+<td>0.25</td>
+<td>0.5</td>
+<td>3</td>
+</tr>
+
+<tr class="odd">
+<td>りょーた</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>1956</td>
+<td>5</td>
+<td>0.2</td>
+<td>0.4</td>
+<td>0.6</td>
+<td>3</td>
+</tr>
+
+<tr class="even">
+<td>シヴァ</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>1954</td>
+<td>11</td>
+<td>0.181818182</td>
+<td>0.454545455</td>
+<td>0.181818182</td>
+<td>2.545454545</td>
+</tr>
+
+<tr class="odd">
+<td>コウノ</td>
+<td>0</td>
+<td>8</td>
+<td>3</td>
+<td>3</td>
+<td>1953</td>
+<td>14</td>
+<td>0</td>
+<td>0.571428571</td>
+<td>0.214285714</td>
+<td>2.642857143</td>
+</tr>
+
+<tr class="even">
+<td>今川</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>1935</td>
+<td>5</td>
+<td>0.2</td>
+<td>0.2</td>
+<td>0.6</td>
+<td>3.2</td>
+</tr>
+
+<tr class="odd">
+<td>あべくん</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>1930</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.666666667</td>
+<td>3.666666667</td>
+</tr>
+
+<tr class="even">
+<td>ナカシマ</td>
+<td>15</td>
+<td>12</td>
+<td>15</td>
+<td>13</td>
+<td>1929</td>
+<td>55</td>
+<td>0.272727273</td>
+<td>0.490909091</td>
+<td>0.236363636</td>
+<td>2.472727273</td>
+</tr>
+
+<tr class="odd">
+<td>まどか</td>
+<td>0</td>
+<td>1</td>
+<td>6</td>
+<td>1</td>
+<td>1926</td>
+<td>8</td>
+<td>0</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>3</td>
+</tr>
+
+<tr class="even">
+<td>kj</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>1920</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+</tr>
+
+<tr class="odd">
+<td>りさ</td>
+<td>0</td>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+<td>1912</td>
+<td>9</td>
+<td>0</td>
+<td>0.555555556</td>
+<td>0.111111111</td>
+<td>2.555555556</td>
+</tr>
+
+<tr class="even">
+<td>レンタ</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>1912</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+</tr>
+
+<tr class="odd">
+<td>花</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1905</td>
+<td>3</td>
+<td>0.333333333</td>
+<td>0.666666667</td>
+<td>0</td>
+<td>2</td>
+</tr>
+
+<tr class="even">
+<td>カズー</td>
+<td>8</td>
+<td>11</td>
+<td>12</td>
+<td>5</td>
+<td>1902</td>
+<td>36</td>
+<td>0.222222222</td>
+<td>0.527777778</td>
+<td>0.138888889</td>
+<td>2.388888889</td>
+</tr>
+
+        </tbody>
+    </table>
 </body>
 </html>
