@@ -4,16 +4,31 @@
 <meta charset="UTF-8">
 <title>月別成績リダイレクト</title>
 <style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+    }
     button {
+        flex: 1 1 20%; /* ボタンを画面の約20%の幅で、それぞれが伸縮可能に */
+        padding: 10px;
         margin: 5px;
-        padding: 10px 20px;
         font-size: 16px;
+        min-width: 90px; /* 最小幅を設定してボタンがあまりに小さくならないように */
+    }
+    @media (max-width: 480px) { /* スマートフォン用のスタイル調整 */
+        button {
+            flex: 1 1 28%; /* スマートフォンではボタンを画面の約28%の幅に */
+            font-size: 14px; /* フォントサイズを少し小さくする */
+            padding: 8px;
+        }
     }
 </style>
 </head>
 <body>
-<h1>月別成績ページへのリンク</h1>
-<div>
     <button onclick="location.href='score_jan.html'">1月</button>
     <button onclick="location.href='score_feb.html'">2月</button>
     <button onclick="location.href='score_mar.html'">3月</button>
@@ -26,6 +41,5 @@
     <button onclick="location.href='score_oct.html'">10月</button>
     <button onclick="location.href='score_nov.html'">11月</button>
     <button onclick="location.href='score_dec.html'">12月</button>
-</div>
 </body>
 </html>
