@@ -5,41 +5,65 @@
 <title>月別成績リダイレクト</title>
 <style>
     body {
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        padding: 20px;
+        background: #f4f4f9;
+        color: #333;
+    }
+    h1, h2 {
+        color: #333;
+        margin: 10px 0;
+    }
+    .buttons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        padding: 20px;
-        gap: 10px;
+        gap: 15px;
+        margin-top: 20px;
     }
     button {
-        flex: 1 1 20%; /* ボタンを画面の約20%の幅で、それぞれが伸縮可能に */
-        padding: 10px;
-        margin: 5px;
+        flex: 1 1 20%;
+        padding: 12px;
         font-size: 16px;
-        min-width: 90px; /* 最小幅を設定してボタンがあまりに小さくならないように */
+        background-color: #5c67f2;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        min-width: 100px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    @media (max-width: 480px) { /* スマートフォン用のスタイル調整 */
+    button:hover, button:focus {
+        background-color: #4349f0;
+        transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
         button {
-            flex: 1 1 28%; /* スマートフォンではボタンを画面の約28%の幅に */
-            font-size: 14px; /* フォントサイズを少し小さくする */
-            padding: 8px;
+            flex: 1 1 46%; /* Adjust button size for smaller devices */
+            padding: 10px;
+            font-size: 14px;
         }
     }
 </style>
 </head>
 <body>
-    <button onclick="location.href='score_jan.html'">1月</button>
-    <button onclick="location.href='score_feb.html'">2月</button>
-    <button onclick="location.href='score_mar.html'">3月</button>
-    <button onclick="location.href='score_apr.html'">4月</button>
-    <button onclick="location.href='score_may.html'">5月</button>
-    <button onclick="location.href='score_jun.html'">6月</button>
-    <button onclick="location.href='score_jul.html'">7月</button>
-    <button onclick="location.href='score_aug.html'">8月</button>
-    <button onclick="location.href='score_sep.html'">9月</button>
-    <button onclick="location.href='score_oct.html'">10月</button>
-    <button onclick="location.href='score_nov.html'">11月</button>
-    <button onclick="location.href='score_dec.html'">12月</button>
+    <h1>月別成績</h1>
+    <h2>2024年</h2>
+    <div class="buttons">
+        <button onclick="location.href='score_jan.html'">1月</button>
+        <button onclick="location.href='score_feb.html'">2月</button>
+        <button onclick="location.href='score_mar.html'">3月</button>
+        <button onclick="location.href='score_apr.html'">4月</button>
+        <button onclick="location.href='score_may.html'">5月</button>
+        <button onclick="location.href='score_jun.html'">6月</button>
+        <button onclick="location.href='score_jul.html'">7月</button>
+        <button onclick="location.href='score_aug.html'">8月</button>
+        <button onclick="location.href='score_sep.html'">9月</button>
+        <button onclick="location.href='score_oct.html'">10月</button>
+        <button onclick="location.href='score_nov.html'">11月</button>
+        <button onclick="location.href='score_dec.html'">12月</button>
+    </div>
 </body>
 </html>
