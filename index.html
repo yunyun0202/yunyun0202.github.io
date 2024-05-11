@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>月別成績リダイレクト</title>
+<title>M-POPPO成績</title>
 <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -10,6 +10,7 @@
         padding: 20px;
         background: #f4f4f9;
         color: #333;
+        position: relative;
     }
     h1, h2 {
         color: #333;
@@ -31,39 +32,59 @@
         border-radius: 8px;
         color: white;
         cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s;
+        transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
         min-width: 100px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     button:hover, button:focus {
         background-color: #4349f0;
         transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0,0,0,0.2);
     }
-    @media (max-width: 600px) {
+    .disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    @media (max-width: 768px) { /* Tablet and down */
         button {
-            flex: 1 1 46%; /* Adjust button size for smaller devices */
+            flex: 1 1 46%;
             padding: 10px;
             font-size: 14px;
         }
     }
+    @media (max-width: 480px) { /* Mobile devices */
+        button {
+            flex: 1 1 100%; /* One button per row on very small screens */
+        }
+    }
+    .last-updated {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 12px;
+        color: #666;
+    }
 </style>
 </head>
 <body>
+    <div class="last-updated">最終更新日: 2024/4/30</div>
     <h1>月別成績</h1>
     <h2>2024年</h2>
     <div class="buttons">
-        <button onclick="location.href='score_jan.html'">1月</button>
+        <button class="disabled" aria-disabled="true">1月</button>
         <button onclick="location.href='score_feb.html'">2月</button>
         <button onclick="location.href='score_mar.html'">3月</button>
         <button onclick="location.href='score_apr.html'">4月</button>
-        <button onclick="location.href='score_may.html'">5月</button>
-        <button onclick="location.href='score_jun.html'">6月</button>
-        <button onclick="location.href='score_jul.html'">7月</button>
-        <button onclick="location.href='score_aug.html'">8月</button>
-        <button onclick="location.href='score_sep.html'">9月</button>
-        <button onclick="location.href='score_oct.html'">10月</button>
-        <button onclick="location.href='score_nov.html'">11月</button>
-        <button onclick="location.href='score_dec.html'">12月</button>
+        <button class="disabled" aria-disabled="true">5月</button>
+        <button class="disabled" aria-disabled="true">6月</button>
+        <button class="disabled" aria-disabled="true">7月</button>
+        <button class="disabled" aria-disabled="true">8月</button>
+        <button class="disabled" aria-disabled="true">9月</button>
+        <button class="disabled" aria-disabled="true">10月</button>
+        <button class="disabled" aria-disabled="true">11月</button>
+        <button class="disabled" aria-disabled="true">12月</button>
     </div>
 </body>
 </html>
