@@ -1,444 +1,242 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>成績表</title>
-    <style>
-        .responsive-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0 0 1em 0;
-            font-size: 0.9em;
-        }
-        .responsive-table th,
-        .responsive-table td {
-            padding: 0.5em;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
-        .responsive-table thead {
-            background-color: #f2f2f2;
-        }
-        .responsive-table tbody tr:nth-child(odd) {
-            background-color: #fdfdfd;
-        }
-        .responsive-table tbody tr:nth-child(even) {
-            background-color: #eff0f1;
-        }
-        @media (max-width: 600px) {
-            .responsive-table th,
-            .responsive-table td {
-                padding: 0.2em;
-            }
-            .responsive-table {
-                font-size: 0.8em;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024年4月成績</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    color: #2a2a72;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+    margin-top: 20px;
+  }
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  th {
+    background-color: #4a69bd;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  th.sortable:hover {
+    background-color: #6574cd;
+  }
+  .sorted-asc::after {
+    content: " ▲";
+  }
+  .sorted-desc::after {
+    content: " ▼";
+  }
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  tr:hover {
+    background-color: #e9ecef;
+  }
+  @media (max-width: 600px) {
+    th, td {
+      padding: 10px;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+  }
+</style>
 </head>
 <body>
-    <table class="responsive-table">
-        <caption>成績</caption>
-        <thead>
-            <tr>
-                <th>名前</th>
-                <th>１位</th>
-                <th>２位</th>
-                <th>３位</th>
-                <th>ラス</th>
-                <th>レート</th>
-                <th>打回数</th>
-                <th>TOP率</th>
-                <th>連帯率</th>
-                <th>ラス率</th>
-                <th>平均着順</th>
-            </tr>
-        </thead>
-        <tbody>
+<h1>2024年4月成績</h1>
+<input type="text" id="searchInput" onkeyup="searchName()" placeholder="名前で検索..." style="margin-bottom: 10px; width: 100%; padding: 8px;">
 
-            
-<tr class="even">
-<td>樋口</td>
-<td>19</td>
-<td>20</td>
-<td>22</td>
-<td>5</td>
-<td>3155</td>
-<td>66</td>
-<td>28.79%</td>
-<td>59.09%</td>
-<td>7.58%</td>
-<td>2.197</td>
-</tr>
-
-<tr class="odd">
-<td>ワタナベ</td>
-<td>27</td>
-<td>14</td>
-<td>7</td>
-<td>13</td>
-<td>2626</td>
-<td>61</td>
-<td>44.26%</td>
-<td>67.21%</td>
-<td>21.31%</td>
-<td>2.098</td>
-</tr>
-
-<tr class="even">
-<td>橋本</td>
-<td>45</td>
-<td>28</td>
-<td>21</td>
-<td>32</td>
-<td>2610</td>
-<td>126</td>
-<td>35.71%</td>
-<td>57.94%</td>
-<td>25.40%</td>
-<td>2.317</td>
-</tr>
-
-<tr class="odd">
-<td>しのはら</td>
-<td>10</td>
-<td>10</td>
-<td>7</td>
-<td>6</td>
-<td>2579</td>
-<td>33</td>
-<td>30.30%</td>
-<td>60.61%</td>
-<td>18.18%</td>
-<td>2.273</td>
-</tr>
-
-<tr class="even">
-<td>まっさん</td>
-<td>18</td>
-<td>11</td>
-<td>12</td>
-<td>9</td>
-<td>2516</td>
-<td>50</td>
-<td>36.00%</td>
-<td>58.00%</td>
-<td>18.00%</td>
-<td>2.240</td>
-</tr>
-
-<tr class="odd">
-<td>ポテチ</td>
-<td>6</td>
-<td>3</td>
-<td>5</td>
-<td>1</td>
-<td>2501</td>
-<td>15</td>
-<td>40.00%</td>
-<td>60.00%</td>
-<td>6.67%</td>
-<td>2.067</td>
-</tr>
-
-<tr class="even">
-<td>川口</td>
-<td>17</td>
-<td>19</td>
-<td>14</td>
-<td>19</td>
-<td>2495</td>
-<td>69</td>
-<td>24.64%</td>
-<td>52.17%</td>
-<td>27.54%</td>
-<td>2.507</td>
-</tr>
-
-<tr class="odd">
-<td>あっこ</td>
-<td>5</td>
-<td>2</td>
-<td>0</td>
-<td>4</td>
-<td>2402</td>
-<td>11</td>
-<td>45.45%</td>
-<td>63.64%</td>
-<td>36.36%</td>
-<td>2.273</td>
-</tr>
-
-<tr class="even">
-<td>かん</td>
-<td>9</td>
-<td>16</td>
-<td>7</td>
-<td>12</td>
-<td>2375</td>
-<td>44</td>
-<td>20.45%</td>
-<td>56.82%</td>
-<td>27.27%</td>
-<td>2.500</td>
-</tr>
-
-<tr class="odd">
-<td>久保</td>
-<td>5</td>
-<td>9</td>
-<td>8</td>
-<td>5</td>
-<td>2317</td>
-<td>27</td>
-<td>18.52%</td>
-<td>51.85%</td>
-<td>18.52%</td>
-<td>2.481</td>
-</tr>
-
-<tr class="even">
-<td>ぺいぺい</td>
-<td>22</td>
-<td>19</td>
-<td>17</td>
-<td>17</td>
-<td>2308</td>
-<td>75</td>
-<td>29.33%</td>
-<td>54.67%</td>
-<td>22.67%</td>
-<td>2.387</td>
-</tr>
-
-<tr class="odd">
-<td>シャチ</td>
-<td>7</td>
-<td>11</td>
-<td>13</td>
-<td>10</td>
-<td>2207</td>
-<td>41</td>
-<td>17.07%</td>
-<td>43.90%</td>
-<td>24.39%</td>
-<td>2.634</td>
-</tr>
-
-<tr class="even">
-<td>たれ目</td>
-<td>3</td>
-<td>1</td>
-<td>3</td>
-<td>0</td>
-<td>2183</td>
-<td>7</td>
-<td>42.86%</td>
-<td>57.14%</td>
-<td>0.00%</td>
-<td>2.000</td>
-</tr>
-
-<tr class="odd">
-<td>ゴトウ</td>
-<td>18</td>
-<td>19</td>
-<td>15</td>
-<td>13</td>
-<td>2176</td>
-<td>65</td>
-<td>27.69%</td>
-<td>56.92%</td>
-<td>20.00%</td>
-<td>2.354</td>
-</tr>
-
-<tr class="even">
-<td>御堂</td>
-<td>2</td>
-<td>3</td>
-<td>3</td>
-<td>4</td>
-<td>2170</td>
-<td>12</td>
-<td>16.67%</td>
-<td>41.67%</td>
-<td>33.33%</td>
-<td>2.750</td>
-</tr>
-
-<tr class="odd">
-<td>ごんべ</td>
-<td>12</td>
-<td>13</td>
-<td>22</td>
-<td>12</td>
-<td>2144</td>
-<td>59</td>
-<td>20.34%</td>
-<td>42.37%</td>
-<td>20.34%</td>
-<td>2.576</td>
-</tr>
-
-<tr class="even">
-<td>つつみ</td>
-<td>1</td>
-<td>1</td>
-<td>2</td>
-<td>0</td>
-<td>2112</td>
-<td>4</td>
-<td>25.00%</td>
-<td>50.00%</td>
-<td>0.00%</td>
-<td>2.250</td>
-</tr>
-
-<tr class="odd">
-<td>まつお</td>
-<td>8</td>
-<td>2</td>
-<td>1</td>
-<td>1</td>
-<td>2103</td>
-<td>12</td>
-<td>66.67%</td>
-<td>83.33%</td>
-<td>8.33%</td>
-<td>1.583</td>
-</tr>
-
-<tr class="even">
-<td>よなは</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>4</td>
-<td>2103</td>
-<td>15</td>
-<td>26.67%</td>
-<td>40.00%</td>
-<td>26.67%</td>
-<td>2.600</td>
-</tr>
-
-<tr class="odd">
-<td>たかちゃん</td>
-<td>10</td>
-<td>6</td>
-<td>4</td>
-<td>10</td>
-<td>2101</td>
-<td>30</td>
-<td>33.33%</td>
-<td>53.33%</td>
-<td>33.33%</td>
-<td>2.467</td>
-</tr>
-
-<tr class="even">
-<td>りょうや</td>
-<td>3</td>
-<td>4</td>
-<td>1</td>
-<td>2</td>
-<td>2086</td>
-<td>10</td>
-<td>30.00%</td>
-<td>70.00%</td>
-<td>20.00%</td>
-<td>2.200</td>
-</tr>
-
-<tr class="odd">
-<td>吉野</td>
-<td>1</td>
-<td>3</td>
-<td>3</td>
-<td>1</td>
-<td>2078</td>
-<td>8</td>
-<td>12.50%</td>
-<td>50.00%</td>
-<td>12.50%</td>
-<td>2.500</td>
-</tr>
-
-<tr class="even">
-<td>しょうの</td>
-<td>2</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>2066</td>
-<td>4</td>
-<td>50.00%</td>
-<td>75.00%</td>
-<td>0.00%</td>
-<td>1.750</td>
-</tr>
-
-<tr class="odd">
-<td>緒方プロ</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>2</td>
-<td>2064</td>
-<td>3</td>
-<td>33.33%</td>
-<td>33.33%</td>
-<td>66.67%</td>
-<td>3.000</td>
-</tr>
-
-<tr class="even">
-<td>はたしょう</td>
-<td>1</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>2062</td>
-<td>4</td>
-<td>25.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
-<td>1.750</td>
-</tr>
-
-<tr class="odd">
-<td>ゆき</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>2040</td>
-<td>2</td>
-<td>50.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
-<td>1.500</td>
-</tr>
-
-<tr class="even">
-<td>薬師寺</td>
-<td>21</td>
-<td>27</td>
-<td>20</td>
-<td>19</td>
-<td>2026</td>
-<td>87</td>
-<td>24.14%</td>
-<td>55.17%</td>
-<td>21.84%</td>
-<td>2.425</td>
-</tr>
-
-</tbody>
-
+<table id="resultsTable">
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th onclick="sortTable(1)" class="sortable">１位</th>
+      <th onclick="sortTable(2)" class="sortable">２位</th>
+      <th onclick="sortTable(3)" class="sortable">３位</th>
+      <th onclick="sortTable(4)" class="sortable">ラス</th>
+      <th onclick="sortTable(5)" class="sortable">レート</th>
+      <th>段位</th>
+      <th onclick="sortTable(7)" class="sortable">打回数</th>
+      <th onclick="sortTable(8)" class="sortable">TOP率</th>
+      <th onclick="sortTable(9)" class="sortable">連帯率</th>
+      <th onclick="sortTable(10)" class="sortable">ラス率</th>
+      <th onclick="sortTable(11)" class="sortable">平均着順</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- テーブルデータをここに挿入 -->
+    
+        <tr><td>樋口</td><td>19</td><td>20</td><td>22</td><td>5</td><td>3155</td><td>ぽっぽ帝</td><td>66</td><td>28.79%</td><td>59.09%</td><td>7.58%</td><td>2.197</td></tr>
+        <tr><td>ワタナベ</td><td>27</td><td>14</td><td>7</td><td>13</td><td>2626</td><td>ぽっぽ王</td><td>61</td><td>44.26%</td><td>67.21%</td><td>21.31%</td><td>2.098</td></tr>
+        <tr><td>橋本</td><td>45</td><td>28</td><td>21</td><td>32</td><td>2610</td><td>ぽっぽ王</td><td>126</td><td>35.71%</td><td>57.94%</td><td>25.40%</td><td>2.317</td></tr>
+        <tr><td>しのはら</td><td>10</td><td>10</td><td>7</td><td>6</td><td>2579</td><td>6段</td><td>33</td><td>30.30%</td><td>60.61%</td><td>18.18%</td><td>2.273</td></tr>
+        <tr><td>まっさん</td><td>18</td><td>11</td><td>12</td><td>9</td><td>2516</td><td>6段</td><td>50</td><td>36.00%</td><td>58.00%</td><td>18.00%</td><td>2.240</td></tr>
+        <tr><td>ポテチ</td><td>6</td><td>3</td><td>5</td><td>1</td><td>2501</td><td>6段</td><td>15</td><td>40.00%</td><td>60.00%</td><td>6.67%</td><td>2.067</td></tr>
+        <tr><td>川口</td><td>17</td><td>19</td><td>14</td><td>19</td><td>2495</td><td>5段</td><td>69</td><td>24.64%</td><td>52.17%</td><td>27.54%</td><td>2.507</td></tr>
+        <tr><td>あっこ</td><td>5</td><td>2</td><td>0</td><td>4</td><td>2402</td><td>5段</td><td>11</td><td>45.45%</td><td>63.64%</td><td>36.36%</td><td>2.273</td></tr>
+        <tr><td>かん</td><td>9</td><td>16</td><td>7</td><td>12</td><td>2375</td><td>4段</td><td>44</td><td>20.45%</td><td>56.82%</td><td>27.27%</td><td>2.500</td></tr>
+        <tr><td>久保</td><td>5</td><td>9</td><td>8</td><td>5</td><td>2317</td><td>4段</td><td>27</td><td>18.52%</td><td>51.85%</td><td>18.52%</td><td>2.481</td></tr>
+        <tr><td>ぺいぺい</td><td>22</td><td>19</td><td>17</td><td>17</td><td>2308</td><td>4段</td><td>75</td><td>29.33%</td><td>54.67%</td><td>22.67%</td><td>2.387</td></tr>
+        <tr><td>シャチ</td><td>7</td><td>11</td><td>13</td><td>10</td><td>2207</td><td>3段</td><td>41</td><td>17.07%</td><td>43.90%</td><td>24.39%</td><td>2.634</td></tr>
+        <tr><td>たれ目</td><td>3</td><td>1</td><td>3</td><td>0</td><td>2183</td><td>2段</td><td>7</td><td>42.86%</td><td>57.14%</td><td>0.00%</td><td>2.000</td></tr>
+        <tr><td>ゴトウ</td><td>18</td><td>19</td><td>15</td><td>13</td><td>2176</td><td>2段</td><td>65</td><td>27.69%</td><td>56.92%</td><td>20.00%</td><td>2.354</td></tr>
+        <tr><td>御堂</td><td>2</td><td>3</td><td>3</td><td>4</td><td>2170</td><td>2段</td><td>12</td><td>16.67%</td><td>41.67%</td><td>33.33%</td><td>2.750</td></tr>
+        <tr><td>ごんべ</td><td>12</td><td>13</td><td>22</td><td>12</td><td>2144</td><td>2段</td><td>59</td><td>20.34%</td><td>42.37%</td><td>20.34%</td><td>2.576</td></tr>
+        <tr><td>つつみ</td><td>1</td><td>1</td><td>2</td><td>0</td><td>2112</td><td>2段</td><td>4</td><td>25.00%</td><td>50.00%</td><td>0.00%</td><td>2.250</td></tr>
+        <tr><td>まつお</td><td>8</td><td>2</td><td>1</td><td>1</td><td>2103</td><td>2段</td><td>12</td><td>66.67%</td><td>83.33%</td><td>8.33%</td><td>1.583</td></tr>
+        <tr><td>よなは</td><td>4</td><td>2</td><td>5</td><td>4</td><td>2103</td><td>2段</td><td>15</td><td>26.67%</td><td>40.00%</td><td>26.67%</td><td>2.600</td></tr>
+        <tr><td>たかちゃん</td><td>10</td><td>6</td><td>4</td><td>10</td><td>2101</td><td>2段</td><td>30</td><td>33.33%</td><td>53.33%</td><td>33.33%</td><td>2.467</td></tr>
+        <tr><td>りょうや</td><td>3</td><td>4</td><td>1</td><td>2</td><td>2086</td><td>初段</td><td>10</td><td>30.00%</td><td>70.00%</td><td>20.00%</td><td>2.200</td></tr>
+        <tr><td>吉野</td><td>1</td><td>3</td><td>3</td><td>1</td><td>2078</td><td>初段</td><td>8</td><td>12.50%</td><td>50.00%</td><td>12.50%</td><td>2.500</td></tr>
+        <tr><td>しょうの</td><td>2</td><td>1</td><td>1</td><td>0</td><td>2066</td><td>初段</td><td>4</td><td>50.00%</td><td>75.00%</td><td>0.00%</td><td>1.750</td></tr>
+        <tr><td>緒方プロ</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2064</td><td>初段</td><td>3</td><td>33.33%</td><td>33.33%</td><td>66.67%</td><td>3.000</td></tr>
+        <tr><td>はたしょう</td><td>1</td><td>3</td><td>0</td><td>0</td><td>2062</td><td>初段</td><td>4</td><td>25.00%</td><td>100.00%</td><td>0.00%</td><td>1.750</td></tr>
+        <tr><td>ゆき</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2040</td><td>初段</td><td>2</td><td>50.00%</td><td>100.00%</td><td>0.00%</td><td>1.500</td></tr>
+        <tr><td>薬師寺</td><td>21</td><td>27</td><td>20</td><td>19</td><td>2026</td><td>初段</td><td>87</td><td>24.14%</td><td>55.17%</td><td>21.84%</td><td>2.425</td></tr>
+        <tr><td>松本</td><td>0</td><td>3</td><td>1</td><td>0</td><td>2022</td><td>初段</td><td>4</td><td>0.00%</td><td>75.00%</td><td>0.00%</td><td>2.250</td></tr>
+        <tr><td>押川</td><td>2</td><td>2</td><td>1</td><td>2</td><td>2018</td><td>初段</td><td>7</td><td>28.57%</td><td>57.14%</td><td>28.57%</td><td>2.429</td></tr>
+        <tr><td>パンドラ</td><td>5</td><td>9</td><td>12</td><td>7</td><td>2017</td><td>初段</td><td>33</td><td>15.15%</td><td>42.42%</td><td>21.21%</td><td>2.636</td></tr>
+        <tr><td>イワイ</td><td>11</td><td>15</td><td>16</td><td>8</td><td>2009</td><td>初段</td><td>50</td><td>22.00%</td><td>52.00%</td><td>16.00%</td><td>2.420</td></tr>
+        <tr><td>向後</td><td>8</td><td>8</td><td>13</td><td>7</td><td>2008</td><td>初段</td><td>36</td><td>22.22%</td><td>44.44%</td><td>19.44%</td><td>2.528</td></tr>
+        <tr><td>カトウ</td><td>1</td><td>0</td><td>3</td><td>0</td><td>2006</td><td>初段</td><td>4</td><td>25.00%</td><td>25.00%</td><td>0.00%</td><td>2.500</td></tr>
+        <tr><td>和田</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1990</td><td>1級</td><td>1</td><td>0.00%</td><td>0.00%</td><td>0.00%</td><td>3.000</td></tr>
+        <tr><td>木村</td><td>4</td><td>3</td><td>4</td><td>4</td><td>1987</td><td>1級</td><td>15</td><td>26.67%</td><td>46.67%</td><td>26.67%</td><td>2.533</td></tr>
+        <tr><td>よしなか</td><td>2</td><td>2</td><td>1</td><td>3</td><td>1980</td><td>1級</td><td>8</td><td>25.00%</td><td>50.00%</td><td>37.50%</td><td>2.625</td></tr>
+        <tr><td>おぐら</td><td>0</td><td>1</td><td>0</td><td>2</td><td>1979</td><td>1級</td><td>3</td><td>0.00%</td><td>33.33%</td><td>66.67%</td><td>3.333</td></tr>
+        <tr><td>アベ</td><td>1</td><td>1</td><td>4</td><td>1</td><td>1973</td><td>1級</td><td>7</td><td>14.29%</td><td>28.57%</td><td>14.29%</td><td>2.714</td></tr>
+        <tr><td>甲斐</td><td>0</td><td>4</td><td>2</td><td>1</td><td>1972</td><td>1級</td><td>7</td><td>0.00%</td><td>57.14%</td><td>14.29%</td><td>2.571</td></tr>
+        <tr><td>よこやま</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1970</td><td>1級</td><td>1</td><td>0.00%</td><td>0.00%</td><td>100.00%</td><td>4.000</td></tr>
+        <tr><td>ナオ</td><td>5</td><td>4</td><td>5</td><td>6</td><td>1970</td><td>1級</td><td>20</td><td>25.00%</td><td>45.00%</td><td>30.00%</td><td>2.600</td></tr>
+        <tr><td>さな</td><td>1</td><td>0</td><td>1</td><td>2</td><td>1960</td><td>1級</td><td>4</td><td>25.00%</td><td>25.00%</td><td>50.00%</td><td>3.000</td></tr>
+        <tr><td>ふじさわ</td><td>17</td><td>10</td><td>14</td><td>20</td><td>1960</td><td>1級</td><td>61</td><td>27.87%</td><td>44.26%</td><td>32.79%</td><td>2.607</td></tr>
+        <tr><td>りょーた</td><td>1</td><td>1</td><td>0</td><td>3</td><td>1956</td><td>1級</td><td>5</td><td>20.00%</td><td>40.00%</td><td>60.00%</td><td>3.000</td></tr>
+        <tr><td>シヴァ</td><td>2</td><td>3</td><td>4</td><td>2</td><td>1954</td><td>1級</td><td>11</td><td>18.18%</td><td>45.45%</td><td>18.18%</td><td>2.545</td></tr>
+        <tr><td>コウノ</td><td>0</td><td>8</td><td>3</td><td>3</td><td>1953</td><td>1級</td><td>14</td><td>0.00%</td><td>57.14%</td><td>21.43%</td><td>2.643</td></tr>
+        <tr><td>今川</td><td>1</td><td>0</td><td>1</td><td>3</td><td>1935</td><td>1級</td><td>5</td><td>20.00%</td><td>20.00%</td><td>60.00%</td><td>3.200</td></tr>
+        <tr><td>あべくん</td><td>0</td><td>0</td><td>1</td><td>2</td><td>1930</td><td>1級</td><td>3</td><td>0.00%</td><td>0.00%</td><td>66.67%</td><td>3.667</td></tr>
+        <tr><td>ナカシマ</td><td>15</td><td>12</td><td>15</td><td>13</td><td>1929</td><td>1級</td><td>55</td><td>27.27%</td><td>49.09%</td><td>23.64%</td><td>2.473</td></tr>
+        <tr><td>まどか</td><td>0</td><td>1</td><td>6</td><td>1</td><td>1926</td><td>1級</td><td>8</td><td>0.00%</td><td>12.50%</td><td>12.50%</td><td>3.000</td></tr>
+        <tr><td>kj</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1920</td><td>1級</td><td>2</td><td>0.00%</td><td>0.00%</td><td>100.00%</td><td>4.000</td></tr>
+        <tr><td>りさ</td><td>0</td><td>5</td><td>3</td><td>1</td><td>1912</td><td>1級</td><td>9</td><td>0.00%</td><td>55.56%</td><td>11.11%</td><td>2.556</td></tr>
+        <tr><td>レンタ</td><td>0</td><td>0</td><td>0</td><td>3</td><td>1912</td><td>1級</td><td>3</td><td>0.00%</td><td>0.00%</td><td>100.00%</td><td>4.000</td></tr>
+        <tr><td>花</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1905</td><td>1級</td><td>3</td><td>33.33%</td><td>66.67%</td><td>0.00%</td><td>2.000</td></tr>
+        <tr><td>カズー</td><td>8</td><td>11</td><td>12</td><td>5</td><td>1902</td><td>1級</td><td>36</td><td>22.22%</td><td>52.78%</td><td>13.89%</td><td>2.389</td></tr>
+        <tr><td>なるライダー</td><td>0</td><td>0</td><td>0</td><td>4</td><td>1884</td><td>2級</td><td>4</td><td>0.00%</td><td>0.00%</td><td>100.00%</td><td>4.000</td></tr>
+        <tr><td>寺下</td><td>0</td><td>0</td><td>0</td><td>4</td><td>1882</td><td>2級</td><td>4</td><td>0.00%</td><td>0.00%</td><td>100.00%</td><td>4.000</td></tr>
+        <tr><td>有田</td><td>5</td><td>3</td><td>0</td><td>6</td><td>1880</td><td>2級</td><td>14</td><td>35.71%</td><td>57.14%</td><td>42.86%</td><td>2.500</td></tr>
+        <tr><td>池田</td><td>21</td><td>22</td><td>28</td><td>25</td><td>1875</td><td>2級</td><td>96</td><td>21.88%</td><td>44.79%</td><td>26.04%</td><td>2.594</td></tr>
+        <tr><td>東</td><td>4</td><td>5</td><td>4</td><td>7</td><td>1872</td><td>2級</td><td>20</td><td>20.00%</td><td>45.00%</td><td>35.00%</td><td>2.700</td></tr>
+        <tr><td>あそう</td><td>2</td><td>0</td><td>1</td><td>3</td><td>1859</td><td>2級</td><td>6</td><td>33.33%</td><td>33.33%</td><td>50.00%</td><td>2.833</td></tr>
+        <tr><td>内田てる</td><td>4</td><td>3</td><td>3</td><td>6</td><td>1806</td><td>2級</td><td>16</td><td>25.00%</td><td>43.75%</td><td>37.50%</td><td>2.688</td></tr>
+        <tr><td>ながたに</td><td>3</td><td>1</td><td>1</td><td>4</td><td>1794</td><td>3級</td><td>9</td><td>33.33%</td><td>44.44%</td><td>44.44%</td><td>2.667</td></tr>
+        <tr><td>山松</td><td>13</td><td>16</td><td>15</td><td>16</td><td>1774</td><td>3級</td><td>60</td><td>21.67%</td><td>48.33%</td><td>26.67%</td><td>2.567</td></tr>
+        <tr><td>みず</td><td>1</td><td>0</td><td>2</td><td>3</td><td>1769</td><td>3級</td><td>6</td><td>16.67%</td><td>16.67%</td><td>50.00%</td><td>3.167</td></tr>
+        <tr><td>こたろー</td><td>6</td><td>5</td><td>12</td><td>12</td><td>1749</td><td>3級</td><td>35</td><td>17.14%</td><td>31.43%</td><td>34.29%</td><td>2.857</td></tr>
+        <tr><td>大海</td><td>3</td><td>2</td><td>6</td><td>4</td><td>1706</td><td>3級</td><td>15</td><td>20.00%</td><td>33.33%</td><td>26.67%</td><td>2.733</td></tr>
+        <tr><td>ママ</td><td>1</td><td>0</td><td>2</td><td>3</td><td>1699</td><td>4級</td><td>6</td><td>16.67%</td><td>16.67%</td><td>50.00%</td><td>3.167</td></tr>
+        <tr><td>安達</td><td>9</td><td>12</td><td>12</td><td>18</td><td>1647</td><td>4級</td><td>51</td><td>17.65%</td><td>41.18%</td><td>35.29%</td><td>2.765</td></tr>
+        <tr><td>みーちゃん</td><td>0</td><td>2</td><td>4</td><td>0</td><td>1639</td><td>4級</td><td>6</td><td>0.00%</td><td>33.33%</td><td>0.00%</td><td>2.667</td></tr>
+        <tr><td>内田ひろし</td><td>1</td><td>1</td><td>6</td><td>5</td><td>1580</td><td>5級</td><td>13</td><td>7.69%</td><td>15.38%</td><td>38.46%</td><td>3.154</td></tr>
+        <tr><td>まつおか</td><td>6</td><td>9</td><td>6</td><td>8</td><td>1565</td><td>5級</td><td>29</td><td>20.69%</td><td>51.72%</td><td>27.59%</td><td>2.552</td></tr>
+        <tr><td>あかり</td><td>0</td><td>0</td><td>1</td><td>3</td><td>1482</td><td>6級</td><td>4</td><td>0.00%</td><td>0.00%</td><td>75.00%</td><td>3.750</td></tr>
+        <tr><td>かんつ</td><td>3</td><td>8</td><td>9</td><td>11</td><td>1456</td><td>6級</td><td>31</td><td>9.68%</td><td>35.48%</td><td>35.48%</td><td>2.903</td></tr>
+    
+    
+   </tbody>
 </table>
 
+<script>
+function sortTable(column) {
+  var table, rows, switching, i, x, y, xValue, yValue, shouldSwitch, dir = "asc", switchcount = 0;
+  table = document.getElementById("resultsTable");
+  removingSortIndicators(column);
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[column];
+      y = rows[i + 1].getElementsByTagName("TD")[column];
+
+      xValue = parseFloat(x.innerHTML) || x.innerHTML.toLowerCase();
+      yValue = parseFloat(y.innerHTML) || y.innerHTML.toLowerCase();
+
+      if ((dir == "asc" && xValue > yValue) || (dir == "desc" && xValue < yValue)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+  updateSortIndicator(column, dir);
+}
+
+function updateSortIndicator(column, dir) {
+  var header = document.querySelectorAll('th')[column];
+  header.classList.add(dir == "asc" ? "sorted-asc" : "sorted-desc");
+}
+
+function removingSortIndicators(exceptColumn) {
+  var headers = document.querySelectorAll('th');
+  headers.forEach(function(header, idx) {
+    if (idx !== exceptColumn) {
+      header.classList.remove("sorted-asc", "sorted-desc");
+    }
+  });
+}
+
+function searchName() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("resultsTable");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0]; // Column 0 is name
+    if (td) {
+      if (td.textContent.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 
 </body>
 </html>
