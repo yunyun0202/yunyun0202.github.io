@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024年4月成績</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    color: #2a2a72;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+    margin-top: 20px;
+  }
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  th {
+    background-color: #4a69bd;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  th.sortable:hover {
+    background-color: #6574cd;
+  }
+  .sorted-asc::after {
+    content: " ▲";
+  }
+  .sorted-desc::after {
+    content: " ▼";
+  }
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  tr:hover {
+    background-color: #e9ecef;
+  }
+  @media (max-width: 600px) {
+    th, td {
+      padding: 10px;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<h1>2024年4月成績</h1>
+<input type="text" id="searchInput" onkeyup="searchName()" placeholder="名前で検索..." style="margin-bottom: 10px; width: 100%; padding: 8px;">
+
+<table id="resultsTable">
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th onclick="sortTable(1)" class="sortable">１位</th>
+      <th onclick="sortTable(2)" class="sortable">２位</th>
+      <th onclick="sortTable(3)" class="sortable">３位</th>
+      <th onclick="sortTable(4)" class="sortable">ラス</th>
+      <th onclick="sortTable(5)" class="sortable">レート</th>
+      <th>段位</th>
+      <th onclick="sortTable(6)" class="sortable">最高レート</th>
+      <th onclick="sortTable(7)" class="sortable">打回数</th>
+      <th onclick="sortTable(8)" class="sortable">TOP率</th>
+      <th onclick="sortTable(9)" class="sortable">連帯率</th>
+      <th onclick="sortTable(10)" class="sortable">ラス率</th>
+      <th onclick="sortTable(11)" class="sortable">平均着順</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- テーブルデータをここに挿入 -->
+
+    
+      <tr><td>樋口</td><td>6</td><td>6</td><td>6</td><td>1</td><td>3213</td><td>ぽっぽ神</td><td>3287</td><td>19</td><td>31.58%</td><td>63.16%</td><td>5.26%</td><td>2.105</td></tr>
+      <tr><td>橋本</td><td>15</td><td>18</td><td>14</td><td>9</td><td>2679</td><td>ぽっぽ王</td><td>2782</td><td>56</td><td>26.79%</td><td>58.93%</td><td>16.07%</td><td>2.304</td></tr>
+      <tr><td>ワタナベ</td><td>6</td><td>1</td><td>3</td><td>5</td><td>2599</td><td>6段</td><td>2691</td><td>15</td><td>40.00%</td><td>46.67%</td><td>33.33%</td><td>2.467</td></tr>
+      <tr><td>しのはら</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2596</td><td>6段</td><td>2633</td><td>5</td><td>40.00%</td><td>60.00%</td><td>20.00%</td><td>2.200</td></tr>
+      <tr><td>川口</td><td>7</td><td>3</td><td>4</td><td>3</td><td>2572</td><td>6段</td><td>2572</td><td>17</td><td>41.18%</td><td>58.82%</td><td>17.65%</td><td>2.176</td></tr>
+      <tr><td>まっさん</td><td>0</td><td>3</td><td>1</td><td>2</td><td>2465</td><td>5段</td><td>2533</td><td>6</td><td>0.00%</td><td>50.00%</td><td>33.33%</td><td>2.833</td></tr>
+      <tr><td>かん</td><td>3</td><td>1</td><td>2</td><td>2</td><td>2390</td><td>4段</td><td>2460</td><td>8</td><td>37.50%</td><td>50.00%</td><td>25.00%</td><td>2.375</td></tr>
+      <tr><td>あっこ</td><td>1</td><td>2</td><td>2</td><td>3</td><td>2335</td><td>4段</td><td>2408</td><td>8</td><td>12.50%</td><td>37.50%</td><td>37.50%</td><td>2.875</td></tr>
+      <tr><td>ぺいぺい</td><td>3</td><td>3</td><td>1</td><td>3</td><td>2327</td><td>4段</td><td>2378</td><td>10</td><td>30.00%</td><td>60.00%</td><td>30.00%</td><td>2.400</td></tr>
+      <tr><td>久保</td><td>3</td><td>4</td><td>1</td><td>4</td><td>2304</td><td>4段</td><td>2366</td><td>12</td><td>25.00%</td><td>58.33%</td><td>33.33%</td><td>2.500</td></tr>
+      <tr><td>ごんべ</td><td>7</td><td>6</td><td>7</td><td>3</td><td>2265</td><td>3段</td><td>2265</td><td>23</td><td>30.43%</td><td>56.52%</td><td>13.04%</td><td>2.261</td></tr>
+      <tr><td>たかちゃん</td><td>6</td><td>4</td><td>1</td><td>3</td><td>2219</td><td>3段</td><td>2279</td><td>14</td><td>42.86%</td><td>71.43%</td><td>21.43%</td><td>2.071</td></tr>
+      <tr><td>しょうの</td><td>6</td><td>1</td><td>0</td><td>2</td><td>2199</td><td>2段</td><td>2216</td><td>9</td><td>66.67%</td><td>77.78%</td><td>22.22%</td><td>1.778</td></tr>
+      <tr><td>まつお</td><td>2</td><td>4</td><td>2</td><td>0</td><td>2180</td><td>2段</td><td>2190</td><td>8</td><td>25.00%</td><td>75.00%</td><td>0.00%</td><td>2.000</td></tr>
+      <tr><td>緒方プロ</td><td>5</td><td>2</td><td>3</td><td>1</td><td>2173</td><td>2段</td><td>2173</td><td>11</td><td>45.45%</td><td>63.64%</td><td>9.09%</td><td>2.000</td></tr>
+      <tr><td>りょうや</td><td>2</td><td>2</td><td>1</td><td>0</td><td>2156</td><td>2段</td><td>2156</td><td>5</td><td>40.00%</td><td>80.00%</td><td>0.00%</td><td>1.800</td></tr>
+      <tr><td>シャチ</td><td>0</td><td>7</td><td>5</td><td>3</td><td>2135</td><td>2段</td><td>2236</td><td>15</td><td>0.00%</td><td>46.67%</td><td>20.00%</td><td>2.733</td></tr>
+      <tr><td>たれ目</td><td>2</td><td>1</td><td>3</td><td>3</td><td>2134</td><td>2段</td><td>2215</td><td>9</td><td>22.22%</td><td>33.33%</td><td>33.33%</td><td>2.778</td></tr>
+      <tr><td>ゴトウ</td><td>3</td><td>8</td><td>11</td><td>4</td><td>2123</td><td>2段</td><td>2200</td><td>26</td><td>11.54%</td><td>42.31%</td><td>15.38%</td><td>2.615</td></tr>
+      <tr><td>おまた</td><td>1</td><td>2</td><td>0</td><td>0</td><td>2120</td><td>2段</td><td>2120</td><td>3</td><td>33.33%</td><td>100.00%</td><td>0.00%</td><td>1.667</td></tr>
+      <tr><td>吉野</td><td>5</td><td>3</td><td>4</td><td>4</td><td>2103</td><td>2段</td><td>2111</td><td>16</td><td>31.25%</td><td>50.00%</td><td>25.00%</td><td>2.438</td></tr>
+      <tr><td>つつみ</td><td>2</td><td>1</td><td>3</td><td>2</td><td>2091</td><td>初段</td><td>2162</td><td>8</td><td>25.00%</td><td>37.50%</td><td>25.00%</td><td>2.625</td></tr>
+      <tr><td>吉松</td><td>3</td><td>1</td><td>1</td><td>1</td><td>2059</td><td>初段</td><td>2080</td><td>6</td><td>50.00%</td><td>66.67%</td><td>16.67%</td><td>2.000</td></tr>
+      <tr><td>パンドラ</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2052</td><td>初段</td><td>2091</td><td>5</td><td>40.00%</td><td>60.00%</td><td>20.00%</td><td>2.200</td></tr>
+      <tr><td>向後</td><td>5</td><td>5</td><td>6</td><td>4</td><td>2039</td><td>初段</td><td>2039</td><td>20</td><td>25.00%</td><td>50.00%</td><td>20.00%</td><td>2.450</td></tr>
+      <tr><td>甲斐</td><td>3</td><td>1</td><td>0</td><td>1</td><td>2039</td><td>初段</td><td>2039</td><td>5</td><td>60.00%</td><td>80.00%</td><td>20.00%</td><td>1.800</td></tr>
+      <tr><td>とみやす</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2036</td><td>初段</td><td>2036</td><td>5</td><td>40.00%</td><td>60.00%</td><td>20.00%</td><td>2.200</td></tr>
+      <tr><td>こぐれ</td><td>0</td><td>1</td><td>0</td><td>0</td><td>2014</td><td>初段</td><td>2014</td><td>1</td><td>0.00%</td><td>100.00%</td><td>0.00%</td><td>2.000</td></tr>
+      <tr><td>泉</td><td>2</td><td>3</td><td>2</td><td>2</td><td>2014</td><td>初段</td><td>2054</td><td>9</td><td>22.22%</td><td>55.56%</td><td>22.22%</td><td>2.444</td></tr>
+      <tr><td>イワイ</td><td>3</td><td>6</td><td>4</td><td>4</td><td>2013</td><td>初段</td><td>2034</td><td>17</td><td>17.65%</td><td>52.94%</td><td>23.53%</td><td>2.529</td></tr>
+      <tr><td>木村</td><td>3</td><td>5</td><td>3</td><td>4</td><td>2003</td><td>初段</td><td>2003</td><td>15</td><td>20.00%</td><td>53.33%</td><td>26.67%</td><td>2.533</td></tr>
+      <tr><td>まつうら</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2001</td><td>初段</td><td>2030</td><td>4</td><td>25.00%</td><td>50.00%</td><td>25.00%</td><td>2.500</td></tr>
+      <tr><td>そのだ</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1992</td><td>1級</td><td>2021</td><td>1</td><td>0.00%</td><td>0.00%</td><td>100.00%</td><td>4.000</td></tr>
+      <tr><td>さくら</td><td>0</td><td>0</td><td>2</td><td>1</td><td>1979</td><td>1級</td><td>2031</td><td>3</td><td>0.00%</td><td>0.00%</td><td>33.33%</td><td>3.333</td></tr>
+      <tr><td>シヴァ</td><td>1</td><td>2</td><td>0</td><td>1</td><td>1976</td><td>1級</td><td>1976</td><td>4</td><td>25.00%</td><td>75.00%</td><td>25.00%</td><td>2.250</td></tr>
+      <tr><td>なりさこ</td><td>0</td><td>0</td><td>1</td><td>2</td><td>1940</td><td>1級</td><td>2010</td><td>3</td><td>0.00%</td><td>0.00%</td><td>66.67%</td><td>3.667</td></tr>
+      <tr><td>鈴木</td><td>2</td><td>1</td><td>2</td><td>4</td><td>1939</td><td>1級</td><td>2030</td><td>9</td><td>22.22%</td><td>33.33%</td><td>44.44%</td><td>2.889</td></tr>
+      <tr><td>吉田</td><td>2</td><td>1</td><td>0</td><td>3</td><td>1913</td><td>1級</td><td>1943</td><td>6</td><td>33.33%</td><td>50.00%</td><td>50.00%</td><td>2.667</td></tr>
+      <tr><td>薬師寺</td><td>4</td><td>2</td><td>9</td><td>6</td><td>1906</td><td>1級</td><td>2056</td><td>21</td><td>19.05%</td><td>28.57%</td><td>28.57%</td><td>2.810</td></tr>
+      <tr><td>よしむら</td><td>0</td><td>3</td><td>1</td><td>0</td><td>1896</td><td>2級</td><td>1896</td><td>4</td><td>0.00%</td><td>75.00%</td><td>0.00%</td><td>2.250</td></tr>
+      <tr><td>ナカシマ</td><td>3</td><td>0</td><td>4</td><td>3</td><td>1892</td><td>2級</td><td>1929</td><td>10</td><td>30.00%</td><td>30.00%</td><td>30.00%</td><td>2.700</td></tr>
+      <tr><td>山口</td><td>3</td><td>1</td><td>0</td><td>2</td><td>1891</td><td>2級</td><td>1891</td><td>6</td><td>50.00%</td><td>66.67%</td><td>33.33%</td><td>2.167</td></tr>
+      <tr><td>みず</td><td>5</td><td>7</td><td>3</td><td>3</td><td>1890</td><td>2級</td><td>1899</td><td>18</td><td>27.78%</td><td>66.67%</td><td>16.67%</td><td>2.222</td></tr>
+      <tr><td>ふじさわ</td><td>5</td><td>3</td><td>5</td><td>8</td><td>1878</td><td>2級</td><td>2048</td><td>21</td><td>23.81%</td><td>38.10%</td><td>38.10%</td><td>2.762</td></tr>
+      <tr><td>まどか</td><td>1</td><td>2</td><td>3</td><td>3</td><td>1876</td><td>2級</td><td>1939</td><td>9</td><td>11.11%</td><td>33.33%</td><td>33.33%</td><td>2.889</td></tr>
+      <tr><td>池田</td><td>6</td><td>3</td><td>1</td><td>7</td><td>1875</td><td>2級</td><td>1953</td><td>17</td><td>35.29%</td><td>52.94%</td><td>41.18%</td><td>2.529</td></tr>
+      <tr><td>りょーた</td><td>0</td><td>1</td><td>5</td><td>3</td><td>1829</td><td>2級</td><td>1956</td><td>9</td><td>0.00%</td><td>11.11%</td><td>33.33%</td><td>3.222</td></tr>
+      <tr><td>東</td><td>2</td><td>1</td><td>3</td><td>3</td><td>1823</td><td>2級</td><td>1932</td><td>9</td><td>22.22%</td><td>33.33%</td><td>33.33%</td><td>2.778</td></tr>
+      <tr><td>カズー</td><td>1</td><td>4</td><td>4</td><td>5</td><td>1787</td><td>3級</td><td>1922</td><td>14</td><td>7.14%</td><td>35.71%</td><td>35.71%</td><td>2.929</td></tr>
+      <tr><td>内田てる</td><td>1</td><td>1</td><td>2</td><td>2</td><td>1774</td><td>3級</td><td>1817</td><td>6</td><td>16.67%</td><td>33.33%</td><td>33.33%</td><td>2.833</td></tr>
+      <tr><td>大海</td><td>4</td><td>2</td><td>3</td><td>2</td><td>1768</td><td>3級</td><td>1837</td><td>11</td><td>36.36%</td><td>54.55%</td><td>18.18%</td><td>2.273</td></tr>
+      <tr><td>こたろー</td><td>0</td><td>1</td><td>4</td><td>0</td><td>1729</td><td>3級</td><td>1749</td><td>5</td><td>0.00%</td><td>20.00%</td><td>0.00%</td><td>2.800</td></tr>
+      <tr><td>ママ</td><td>1</td><td>2</td><td>0</td><td>1</td><td>1728</td><td>3級</td><td>1744</td><td>4</td><td>25.00%</td><td>75.00%</td><td>25.00%</td><td>2.250</td></tr>
+      <tr><td>みーちゃん</td><td>1</td><td>3</td><td>0</td><td>2</td><td>1645</td><td>4級</td><td>1675</td><td>6</td><td>16.67%</td><td>66.67%</td><td>33.33%</td><td>2.500</td></tr>
+      <tr><td>山松</td><td>0</td><td>2</td><td>4</td><td>6</td><td>1599</td><td>5級</td><td>1774</td><td>12</td><td>0.00%</td><td>16.67%</td><td>50.00%</td><td>3.333</td></tr>
+      <tr><td>まつおか</td><td>1</td><td>2</td><td>3</td><td>1</td><td>1571</td><td>5級</td><td>1607</td><td>7</td><td>14.29%</td><td>42.86%</td><td>14.29%</td><td>2.571</td></tr>
+      <tr><td>内田ひろし</td><td>0</td><td>1</td><td>0</td><td>2</td><td>1539</td><td>5級</td><td>1580</td><td>3</td><td>0.00%</td><td>33.33%</td><td>66.67%</td><td>3.333</td></tr>
+      <tr><td>安達</td><td>2</td><td>4</td><td>3</td><td>8</td><td>1516</td><td>5級</td><td>1649</td><td>17</td><td>11.76%</td><td>35.29%</td><td>47.06%</td><td>3.000</td></tr>
+      <tr><td>かんつ</td><td>2</td><td>1</td><td>2</td><td>2</td><td>1474</td><td>6級</td><td>1474</td><td>7</td><td>28.57%</td><td>42.86%</td><td>28.57%</td><td>2.571</td></tr>
+    
+    
+
+   </tbody>
+</table>
+
+<script>
+function sortTable(column) {
+  var table, rows, switching, i, x, y, xValue, yValue, shouldSwitch, dir = "asc", switchcount = 0;
+  table = document.getElementById("resultsTable");
+  removingSortIndicators(column);
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[column];
+      y = rows[i + 1].getElementsByTagName("TD")[column];
+
+      xValue = parseFloat(x.innerHTML) || x.innerHTML.toLowerCase();
+      yValue = parseFloat(y.innerHTML) || y.innerHTML.toLowerCase();
+
+      if ((dir == "asc" && xValue > yValue) || (dir == "desc" && xValue < yValue)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      } else {
+        dir = "asc";
+      }
+    }
+  }
+  updateSortIndicator(column, dir);
+}
+
+function updateSortIndicator(column, dir) {
+  var header = document.querySelectorAll('th')[column];
+  header.classList.add(dir == "asc" ? "sorted-asc" : "sorted-desc");
+}
+
+function removingSortIndicators(exceptColumn) {
+  var headers = document.querySelectorAll('th');
+  headers.forEach(function(header, idx) {
+    if (idx !== exceptColumn) {
+      header.classList.remove("sorted-asc", "sorted-desc");
+    }
+  });
+}
+
+function searchName() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("resultsTable");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0]; // Column 0 is name
+    if (td) {
+      if (td.textContent.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
