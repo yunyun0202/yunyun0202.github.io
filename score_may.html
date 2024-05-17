@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2024年4月成績</title>
+<title>2024年5月成績</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -63,7 +63,7 @@
 </style>
 </head>
 <body>
-<h1>2024年4月成績</h1>
+<h1>2024年5月成績</h1>
 <input type="text" id="searchInput" onkeyup="searchName()" placeholder="名前で検索..." style="margin-bottom: 10px; width: 100%; padding: 8px;">
 
 <table id="resultsTable">
@@ -76,17 +76,17 @@
       <th onclick="sortTable(4)" class="sortable">ラス</th>
       <th onclick="sortTable(5)" class="sortable">レート</th>
       <th>段位</th>
-      <th onclick="sortTable(6)" class="sortable">最高レート</th>
-      <th onclick="sortTable(7)" class="sortable">打回数</th>
-      <th onclick="sortTable(8)" class="sortable">TOP率</th>
-      <th onclick="sortTable(9)" class="sortable">連帯率</th>
-      <th onclick="sortTable(10)" class="sortable">ラス率</th>
-      <th onclick="sortTable(11)" class="sortable">平均着順</th>
+      <th onclick="sortTable(7)" class="sortable">最高レート</th>
+      <th onclick="sortTable(8)" class="sortable">打回数</th>
+      <th onclick="sortTable(9)" class="sortable">TOP率</th>  
+      <th onclick="sortTable(10)" class="sortable">連帯率</th>
+      <th onclick="sortTable(11)" class="sortable">ラス率</th>
+      <th onclick="sortTable(12)" class="sortable">平均着順</th>
     </tr>
   </thead>
   <tbody>
     <!-- テーブルデータをここに挿入 -->
-
+    
     
       <tr><td>樋口</td><td>6</td><td>6</td><td>6</td><td>1</td><td>3213</td><td>ぽっぽ神</td><td>3287</td><td>19</td><td>31.58%</td><td>63.16%</td><td>5.26%</td><td>2.105</td></tr>
       <tr><td>橋本</td><td>15</td><td>18</td><td>14</td><td>9</td><td>2679</td><td>ぽっぽ王</td><td>2782</td><td>56</td><td>26.79%</td><td>58.93%</td><td>16.07%</td><td>2.304</td></tr>
@@ -149,7 +149,8 @@
       <tr><td>かんつ</td><td>2</td><td>1</td><td>2</td><td>2</td><td>1474</td><td>6級</td><td>1474</td><td>7</td><td>28.57%</td><td>42.86%</td><td>28.57%</td><td>2.571</td></tr>
     
     
-
+     
+    
    </tbody>
 </table>
 
@@ -186,8 +187,6 @@ function sortTable(column) {
       if (switchcount == 0 && dir == "asc") {
         dir = "desc";
         switching = true;
-      } else {
-        dir = "asc";
       }
     }
   }
