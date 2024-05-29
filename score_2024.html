@@ -63,7 +63,7 @@
 </style>
 </head>
 <body>
-<h1>2024年2/1~5/21</h1>
+<h1>2024年2/1~5/25</h1>
 <input type="text" id="searchInput" onkeyup="searchName()" placeholder="名前で検索..." style="margin-bottom: 10px; width: 100%; padding: 8px;">
 
 <table id="resultsTable">
@@ -74,88 +74,75 @@
       <th onclick="sortTable(2)" class="sortable">２位</th>
       <th onclick="sortTable(3)" class="sortable">３位</th>
       <th onclick="sortTable(4)" class="sortable">ラス</th>
-      <th onclick="sortTable(5)" class="sortable">打回数</th>
-      <th onclick="sortTable(6)" class="sortable">TOP率</th>
-      <th onclick="sortTable(7)" class="sortable">連帯率</th>
-      <th onclick="sortTable(8)" class="sortable">ラス率</th>
-      <th onclick="sortTable(9)" class="sortable">平均着順</th>
+      <th onclick="sortTable(5)" class="sortable">レート</th>
+      <th>段位</th>
+      <th onclick="sortTable(7)" class="sortable">打回数</th>
+      <th onclick="sortTable(8)" class="sortable">TOP率</th>
+      <th onclick="sortTable(9)" class="sortable">連帯率</th>
+      <th onclick="sortTable(10)" class="sortable">ラス率</th>
+      <th onclick="sortTable(11)" class="sortable">平均着順</th>
     </tr>
   </thead>
   <tbody>
     <!-- テーブルデータをここに挿入 -->
     
   
-	<tr><td>橋本</td><td>120</td><td>122</td><td>94</td><td>103</td><td>439</td><td>0.273</td><td>0.551</td><td>0.235</td><td>2.410</td></tr>
-	<tr><td>池田</td><td>85</td><td>84</td><td>78</td><td>87</td><td>334</td><td>0.254</td><td>0.506</td><td>0.260</td><td>2.500</td></tr>
-	<tr><td>樋口</td><td>95</td><td>82</td><td>71</td><td>40</td><td>288</td><td>0.330</td><td>0.615</td><td>0.139</td><td>2.194</td></tr>
-	<tr><td>薬師寺</td><td>63</td><td>68</td><td>77</td><td>71</td><td>279</td><td>0.226</td><td>0.470</td><td>0.254</td><td>2.559</td></tr>
-	<tr><td>ワタナベ</td><td>79</td><td>64</td><td>55</td><td>62</td><td>260</td><td>0.304</td><td>0.550</td><td>0.238</td><td>2.385</td></tr>
-	<tr><td>ぺいぺい</td><td>62</td><td>66</td><td>52</td><td>58</td><td>238</td><td>0.261</td><td>0.538</td><td>0.244</td><td>2.445</td></tr>
-	<tr><td>川口</td><td>66</td><td>60</td><td>45</td><td>56</td><td>227</td><td>0.291</td><td>0.555</td><td>0.247</td><td>2.401</td></tr>
-	<tr><td>ごんべ</td><td>59</td><td>58</td><td>60</td><td>48</td><td>225</td><td>0.262</td><td>0.520</td><td>0.213</td><td>2.431</td></tr>
-	<tr><td>まっさん</td><td>62</td><td>58</td><td>46</td><td>51</td><td>217</td><td>0.286</td><td>0.553</td><td>0.235</td><td>2.396</td></tr>
-	<tr><td>安達</td><td>45</td><td>54</td><td>55</td><td>58</td><td>212</td><td>0.212</td><td>0.467</td><td>0.274</td><td>2.594</td></tr>
-	<tr><td>ナカノ</td><td>67</td><td>47</td><td>48</td><td>28</td><td>190</td><td>0.353</td><td>0.600</td><td>0.147</td><td>2.195</td></tr>
-	<tr><td>シャチ</td><td>40</td><td>53</td><td>54</td><td>43</td><td>190</td><td>0.211</td><td>0.489</td><td>0.226</td><td>2.526</td></tr>
-	<tr><td>しのはら</td><td>53</td><td>45</td><td>47</td><td>41</td><td>186</td><td>0.285</td><td>0.527</td><td>0.220</td><td>2.409</td></tr>
-	<tr><td>東</td><td>43</td><td>45</td><td>49</td><td>48</td><td>185</td><td>0.232</td><td>0.476</td><td>0.259</td><td>2.551</td></tr>
-	<tr><td>たかちゃん</td><td>51</td><td>33</td><td>41</td><td>47</td><td>172</td><td>0.297</td><td>0.488</td><td>0.273</td><td>2.488</td></tr>
-	<tr><td>久保</td><td>43</td><td>47</td><td>35</td><td>37</td><td>162</td><td>0.265</td><td>0.556</td><td>0.228</td><td>2.407</td></tr>
-	<tr><td>イワイ</td><td>34</td><td>39</td><td>46</td><td>33</td><td>152</td><td>0.224</td><td>0.480</td><td>0.217</td><td>2.513</td></tr>
-	<tr><td>ゴトウ</td><td>34</td><td>40</td><td>39</td><td>37</td><td>150</td><td>0.227</td><td>0.493</td><td>0.247</td><td>2.527</td></tr>
-	<tr><td>ふじさわ</td><td>40</td><td>28</td><td>41</td><td>40</td><td>149</td><td>0.268</td><td>0.456</td><td>0.268</td><td>2.544</td></tr>
-	<tr><td>ナカシマ</td><td>36</td><td>32</td><td>41</td><td>38</td><td>147</td><td>0.245</td><td>0.463</td><td>0.259</td><td>2.551</td></tr>
-	<tr><td>かん</td><td>38</td><td>45</td><td>23</td><td>34</td><td>140</td><td>0.271</td><td>0.593</td><td>0.243</td><td>2.379</td></tr>
-	<tr><td>木村</td><td>30</td><td>32</td><td>41</td><td>29</td><td>132</td><td>0.227</td><td>0.470</td><td>0.220</td><td>2.523</td></tr>
-	<tr><td>まつお</td><td>28</td><td>30</td><td>27</td><td>28</td><td>113</td><td>0.248</td><td>0.513</td><td>0.248</td><td>2.487</td></tr>
-	<tr><td>カズー</td><td>21</td><td>33</td><td>29</td><td>24</td><td>107</td><td>0.196</td><td>0.505</td><td>0.224</td><td>2.523</td></tr>
-	<tr><td>山松</td><td>17</td><td>27</td><td>28</td><td>34</td><td>106</td><td>0.160</td><td>0.415</td><td>0.321</td><td>2.745</td></tr>
-	<tr><td>まつおか</td><td>19</td><td>25</td><td>22</td><td>30</td><td>96</td><td>0.198</td><td>0.458</td><td>0.313</td><td>2.656</td></tr>
-	<tr><td>内田てる</td><td>19</td><td>15</td><td>24</td><td>27</td><td>85</td><td>0.224</td><td>0.400</td><td>0.318</td><td>2.694</td></tr>
-	<tr><td>ポテチ</td><td>27</td><td>21</td><td>19</td><td>15</td><td>82</td><td>0.329</td><td>0.585</td><td>0.183</td><td>2.268</td></tr>
-	<tr><td>かんつ</td><td>10</td><td>21</td><td>25</td><td>24</td><td>80</td><td>0.125</td><td>0.388</td><td>0.300</td><td>2.788</td></tr>
-	<tr><td>向後</td><td>19</td><td>14</td><td>25</td><td>18</td><td>76</td><td>0.250</td><td>0.434</td><td>0.237</td><td>2.553</td></tr>
-	<tr><td>花</td><td>18</td><td>18</td><td>22</td><td>16</td><td>74</td><td>0.243</td><td>0.486</td><td>0.216</td><td>2.486</td></tr>
-	<tr><td>みず</td><td>15</td><td>18</td><td>15</td><td>19</td><td>67</td><td>0.224</td><td>0.493</td><td>0.284</td><td>2.567</td></tr>
-	<tr><td>パンドラ</td><td>13</td><td>14</td><td>23</td><td>16</td><td>66</td><td>0.197</td><td>0.409</td><td>0.242</td><td>2.636</td></tr>
-	<tr><td>大海</td><td>13</td><td>11</td><td>23</td><td>18</td><td>65</td><td>0.200</td><td>0.369</td><td>0.277</td><td>2.708</td></tr>
-	<tr><td>かず</td><td>17</td><td>13</td><td>14</td><td>17</td><td>61</td><td>0.279</td><td>0.492</td><td>0.279</td><td>2.508</td></tr>
-	<tr><td>甲斐</td><td>14</td><td>14</td><td>13</td><td>19</td><td>60</td><td>0.233</td><td>0.467</td><td>0.317</td><td>2.617</td></tr>
-	<tr><td>御堂</td><td>11</td><td>18</td><td>16</td><td>14</td><td>59</td><td>0.186</td><td>0.492</td><td>0.237</td><td>2.559</td></tr>
-	<tr><td>有田</td><td>14</td><td>14</td><td>10</td><td>18</td><td>56</td><td>0.250</td><td>0.500</td><td>0.321</td><td>2.571</td></tr>
-	<tr><td>山口</td><td>16</td><td>8</td><td>13</td><td>18</td><td>55</td><td>0.291</td><td>0.436</td><td>0.327</td><td>2.600</td></tr>
-	<tr><td>内田ひろし</td><td>10</td><td>9</td><td>14</td><td>22</td><td>55</td><td>0.182</td><td>0.345</td><td>0.400</td><td>2.873</td></tr>
-	<tr><td>たれ目</td><td>15</td><td>8</td><td>16</td><td>13</td><td>52</td><td>0.288</td><td>0.442</td><td>0.250</td><td>2.519</td></tr>
-	<tr><td>よなは</td><td>14</td><td>12</td><td>14</td><td>11</td><td>51</td><td>0.275</td><td>0.510</td><td>0.216</td><td>2.431</td></tr>
-	<tr><td>シヴァ</td><td>12</td><td>13</td><td>10</td><td>16</td><td>51</td><td>0.235</td><td>0.490</td><td>0.314</td><td>2.588</td></tr>
-	<tr><td>こたろー</td><td>7</td><td>8</td><td>21</td><td>14</td><td>50</td><td>0.140</td><td>0.300</td><td>0.280</td><td>2.840</td></tr>
-	<tr><td>吉野</td><td>9</td><td>13</td><td>11</td><td>8</td><td>41</td><td>0.220</td><td>0.537</td><td>0.195</td><td>2.439</td></tr>
-	<tr><td>緒方プロ</td><td>12</td><td>8</td><td>10</td><td>7</td><td>37</td><td>0.324</td><td>0.541</td><td>0.189</td><td>2.324</td></tr>
-	<tr><td>コウノ</td><td>4</td><td>14</td><td>11</td><td>7</td><td>36</td><td>0.111</td><td>0.500</td><td>0.194</td><td>2.583</td></tr>
-	<tr><td>ながたに</td><td>11</td><td>5</td><td>11</td><td>9</td><td>36</td><td>0.306</td><td>0.444</td><td>0.250</td><td>2.500</td></tr>
-	<tr><td>あっこ</td><td>7</td><td>9</td><td>6</td><td>12</td><td>34</td><td>0.206</td><td>0.471</td><td>0.353</td><td>2.676</td></tr>
-	<tr><td>みーちゃん</td><td>3</td><td>10</td><td>7</td><td>7</td><td>27</td><td>0.111</td><td>0.481</td><td>0.259</td><td>2.667</td></tr>
-	<tr><td>泉</td><td>8</td><td>8</td><td>5</td><td>5</td><td>26</td><td>0.308</td><td>0.615</td><td>0.192</td><td>2.269</td></tr>
-	<tr><td>ナオ</td><td>5</td><td>4</td><td>7</td><td>9</td><td>25</td><td>0.200</td><td>0.360</td><td>0.360</td><td>2.800</td></tr>
-	<tr><td>薬師寺ｊ</td><td>4</td><td>7</td><td>6</td><td>6</td><td>23</td><td>0.174</td><td>0.478</td><td>0.261</td><td>2.609</td></tr>
-	<tr><td>つつみ</td><td>5</td><td>3</td><td>10</td><td>5</td><td>23</td><td>0.217</td><td>0.348</td><td>0.217</td><td>2.652</td></tr>
-	<tr><td>まつうら</td><td>5</td><td>6</td><td>4</td><td>6</td><td>21</td><td>0.238</td><td>0.524</td><td>0.286</td><td>2.524</td></tr>
-	<tr><td>信原</td><td>3</td><td>7</td><td>4</td><td>5</td><td>19</td><td>0.158</td><td>0.526</td><td>0.263</td><td>2.579</td></tr>
-	<tr><td>りょうや</td><td>5</td><td>9</td><td>3</td><td>2</td><td>19</td><td>0.263</td><td>0.737</td><td>0.105</td><td>2.105</td></tr>
-	<tr><td>ママ</td><td>2</td><td>2</td><td>5</td><td>10</td><td>19</td><td>0.105</td><td>0.211</td><td>0.526</td><td>3.211</td></tr>
-	<tr><td>ゆうた</td><td>1</td><td>3</td><td>5</td><td>9</td><td>18</td><td>0.056</td><td>0.222</td><td>0.500</td><td>3.222</td></tr>
-	<tr><td>あかり</td><td>1</td><td>2</td><td>5</td><td>10</td><td>18</td><td>0.056</td><td>0.167</td><td>0.556</td><td>3.333</td></tr>
-	<tr><td>まどか</td><td>1</td><td>3</td><td>9</td><td>4</td><td>17</td><td>0.059</td><td>0.235</td><td>0.235</td><td>2.941</td></tr>
-	<tr><td>後藤司</td><td>3</td><td>6</td><td>2</td><td>4</td><td>15</td><td>0.200</td><td>0.600</td><td>0.267</td><td>2.467</td></tr>
-	<tr><td>吉松</td><td>3</td><td>2</td><td>4</td><td>5</td><td>14</td><td>0.214</td><td>0.357</td><td>0.357</td><td>2.786</td></tr>
-	<tr><td>りょーた</td><td>1</td><td>2</td><td>5</td><td>6</td><td>14</td><td>0.071</td><td>0.214</td><td>0.429</td><td>3.143</td></tr>
-	<tr><td>しょうの</td><td>8</td><td>2</td><td>1</td><td>2</td><td>13</td><td>0.615</td><td>0.769</td><td>0.154</td><td>1.769</td></tr>
-	<tr><td>りさ</td><td>0</td><td>6</td><td>3</td><td>4</td><td>13</td><td>0.000</td><td>0.462</td><td>0.308</td><td>2.846</td></tr>
-	<tr><td>みやまる</td><td>2</td><td>3</td><td>2</td><td>4</td><td>11</td><td>0.182</td><td>0.455</td><td>0.364</td><td>2.727</td></tr>
-	<tr><td>あそう</td><td>2</td><td>0</td><td>3</td><td>6</td><td>11</td><td>0.182</td><td>0.182</td><td>0.545</td><td>3.182</td></tr>
-	<tr><td>たま</td><td>2</td><td>1</td><td>3</td><td>5</td><td>11</td><td>0.182</td><td>0.273</td><td>0.455</td><td>3.000</td></tr>
-	<tr><td>むらい</td><td>4</td><td>1</td><td>5</td><td>1</td><td>11</td><td>0.364</td><td>0.455</td><td>0.091</td><td>2.273</td></tr>
-	<tr><td>吉田</td><td>2</td><td>2</td><td>2</td><td>4</td><td>10</td><td>0.200</td><td>0.400</td><td>0.400</td><td>2.800</td></tr>
+	<tr><td>橋本</td><td>123</td><td>124</td><td>100</td><td>109</td><td>2510</td><td>6段</td><td>456</td><td>0.270</td><td>0.542</td><td>0.239</td><td>2.428</td></tr>
+	<tr><td>池田</td><td>88</td><td>84</td><td>79</td><td>87</td><td>2019</td><td>初段</td><td>338</td><td>0.260</td><td>0.509</td><td>0.257</td><td>2.488</td></tr>
+	<tr><td>樋口</td><td>96</td><td>83</td><td>73</td><td>41</td><td>3183</td><td>ぽっぽ帝</td><td>293</td><td>0.328</td><td>0.611</td><td>0.140</td><td>2.201</td></tr>
+	<tr><td>薬師寺</td><td>67</td><td>72</td><td>80</td><td>72</td><td>2089</td><td>初段</td><td>291</td><td>0.230</td><td>0.478</td><td>0.247</td><td>2.540</td></tr>
+	<tr><td>ワタナベ</td><td>79</td><td>65</td><td>58</td><td>62</td><td>2571</td><td>6段</td><td>264</td><td>0.299</td><td>0.545</td><td>0.235</td><td>2.390</td></tr>
+	<tr><td>川口</td><td>70</td><td>64</td><td>49</td><td>61</td><td>2483</td><td>5段</td><td>244</td><td>0.287</td><td>0.549</td><td>0.250</td><td>2.414</td></tr>
+	<tr><td>ぺいぺい</td><td>63</td><td>66</td><td>56</td><td>58</td><td>2369</td><td>4段</td><td>243</td><td>0.259</td><td>0.531</td><td>0.239</td><td>2.449</td></tr>
+	<tr><td>ごんべ</td><td>60</td><td>60</td><td>63</td><td>50</td><td>2369</td><td>4段</td><td>233</td><td>0.258</td><td>0.515</td><td>0.215</td><td>2.442</td></tr>
+	<tr><td>まっさん</td><td>66</td><td>61</td><td>47</td><td>55</td><td>2496</td><td>5段</td><td>229</td><td>0.288</td><td>0.555</td><td>0.240</td><td>2.397</td></tr>
+	<tr><td>安達</td><td>47</td><td>56</td><td>57</td><td>58</td><td>1550</td><td>5級</td><td>218</td><td>0.216</td><td>0.472</td><td>0.266</td><td>2.578</td></tr>
+	<tr><td>シャチ</td><td>43</td><td>55</td><td>57</td><td>45</td><td>2125</td><td>2段</td><td>200</td><td>0.215</td><td>0.490</td><td>0.225</td><td>2.520</td></tr>
+	<tr><td>ナカノ</td><td>72</td><td>49</td><td>48</td><td>29</td><td>3053</td><td>ぽっぽ帝</td><td>198</td><td>0.364</td><td>0.611</td><td>0.146</td><td>2.172</td></tr>
+	<tr><td>しのはら</td><td>53</td><td>50</td><td>48</td><td>42</td><td>2434</td><td>5段</td><td>193</td><td>0.275</td><td>0.534</td><td>0.218</td><td>2.409</td></tr>
+	<tr><td>東</td><td>43</td><td>45</td><td>49</td><td>48</td><td>1823</td><td>2級</td><td>185</td><td>0.232</td><td>0.476</td><td>0.259</td><td>2.551</td></tr>
+	<tr><td>たかちゃん</td><td>54</td><td>34</td><td>42</td><td>52</td><td>2017</td><td>初段</td><td>182</td><td>0.297</td><td>0.484</td><td>0.286</td><td>2.505</td></tr>
+	<tr><td>ゴトウ</td><td>35</td><td>46</td><td>42</td><td>44</td><td>1852</td><td>2級</td><td>167</td><td>0.210</td><td>0.485</td><td>0.263</td><td>2.569</td></tr>
+	<tr><td>久保</td><td>43</td><td>48</td><td>36</td><td>38</td><td>2453</td><td>5段</td><td>165</td><td>0.261</td><td>0.552</td><td>0.230</td><td>2.418</td></tr>
+	<tr><td>イワイ</td><td>37</td><td>43</td><td>49</td><td>34</td><td>2166</td><td>2段</td><td>163</td><td>0.227</td><td>0.491</td><td>0.209</td><td>2.491</td></tr>
+	<tr><td>ふじさわ</td><td>44</td><td>32</td><td>43</td><td>43</td><td>2020</td><td>初段</td><td>162</td><td>0.272</td><td>0.469</td><td>0.265</td><td>2.525</td></tr>
+	<tr><td>ナカシマ</td><td>36</td><td>32</td><td>41</td><td>38</td><td>1892</td><td>2級</td><td>147</td><td>0.245</td><td>0.463</td><td>0.259</td><td>2.551</td></tr>
+	<tr><td>かん</td><td>40</td><td>46</td><td>24</td><td>34</td><td>2303</td><td>4段</td><td>144</td><td>0.278</td><td>0.597</td><td>0.236</td><td>2.361</td></tr>
+	<tr><td>木村</td><td>30</td><td>32</td><td>41</td><td>29</td><td>2234</td><td>3段</td><td>132</td><td>0.227</td><td>0.470</td><td>0.220</td><td>2.523</td></tr>
+	<tr><td>カズー</td><td>25</td><td>36</td><td>31</td><td>27</td><td>1921</td><td>1級</td><td>119</td><td>0.210</td><td>0.513</td><td>0.227</td><td>2.504</td></tr>
+	<tr><td>まつお</td><td>28</td><td>31</td><td>28</td><td>28</td><td>2121</td><td>2段</td><td>115</td><td>0.243</td><td>0.513</td><td>0.243</td><td>2.487</td></tr>
+	<tr><td>山松</td><td>17</td><td>27</td><td>28</td><td>34</td><td>1654</td><td>4級</td><td>106</td><td>0.160</td><td>0.415</td><td>0.321</td><td>2.745</td></tr>
+	<tr><td>まつおか</td><td>19</td><td>27</td><td>22</td><td>32</td><td>1558</td><td>5級</td><td>100</td><td>0.190</td><td>0.460</td><td>0.320</td><td>2.670</td></tr>
+	<tr><td>ポテチ</td><td>29</td><td>22</td><td>22</td><td>17</td><td>2586</td><td>6段</td><td>90</td><td>0.322</td><td>0.567</td><td>0.189</td><td>2.300</td></tr>
+	<tr><td>かんつ</td><td>14</td><td>22</td><td>27</td><td>26</td><td>1527</td><td>5級</td><td>89</td><td>0.157</td><td>0.404</td><td>0.292</td><td>2.730</td></tr>
+	<tr><td>内田てる</td><td>20</td><td>15</td><td>25</td><td>27</td><td>1730</td><td>3級</td><td>87</td><td>0.230</td><td>0.402</td><td>0.310</td><td>2.678</td></tr>
+	<tr><td>花</td><td>21</td><td>18</td><td>24</td><td>18</td><td>1937</td><td>1級</td><td>81</td><td>0.259</td><td>0.481</td><td>0.222</td><td>2.481</td></tr>
+	<tr><td>向後</td><td>20</td><td>14</td><td>27</td><td>19</td><td>1966</td><td>1級</td><td>80</td><td>0.250</td><td>0.425</td><td>0.238</td><td>2.563</td></tr>
+	<tr><td>かず</td><td>21</td><td>14</td><td>16</td><td>17</td><td>1923</td><td>1級</td><td>68</td><td>0.309</td><td>0.515</td><td>0.250</td><td>2.426</td></tr>
+	<tr><td>みず</td><td>15</td><td>18</td><td>15</td><td>19</td><td>1922</td><td>1級</td><td>67</td><td>0.224</td><td>0.493</td><td>0.284</td><td>2.567</td></tr>
+	<tr><td>パンドラ</td><td>13</td><td>14</td><td>23</td><td>16</td><td>2052</td><td>初段</td><td>66</td><td>0.197</td><td>0.409</td><td>0.242</td><td>2.636</td></tr>
+	<tr><td>大海</td><td>13</td><td>11</td><td>23</td><td>18</td><td>1632</td><td>4級</td><td>65</td><td>0.200</td><td>0.369</td><td>0.277</td><td>2.708</td></tr>
+	<tr><td>内田ひろし</td><td>10</td><td>12</td><td>17</td><td>22</td><td>1570</td><td>5級</td><td>61</td><td>0.164</td><td>0.361</td><td>0.361</td><td>2.836</td></tr>
+	<tr><td>甲斐</td><td>14</td><td>14</td><td>13</td><td>19</td><td>1997</td><td>1級</td><td>60</td><td>0.233</td><td>0.467</td><td>0.317</td><td>2.617</td></tr>
+	<tr><td>御堂</td><td>11</td><td>18</td><td>16</td><td>14</td><td>2170</td><td>2段</td><td>59</td><td>0.186</td><td>0.492</td><td>0.237</td><td>2.559</td></tr>
+	<tr><td>たれ目</td><td>16</td><td>9</td><td>17</td><td>17</td><td>2000</td><td>初段</td><td>59</td><td>0.271</td><td>0.424</td><td>0.288</td><td>2.593</td></tr>
+	<tr><td>こたろー</td><td>7</td><td>9</td><td>22</td><td>19</td><td>1585</td><td>5級</td><td>57</td><td>0.123</td><td>0.281</td><td>0.333</td><td>2.930</td></tr>
+	<tr><td>有田</td><td>14</td><td>14</td><td>10</td><td>18</td><td>1880</td><td>2級</td><td>56</td><td>0.250</td><td>0.500</td><td>0.321</td><td>2.571</td></tr>
+	<tr><td>山口</td><td>16</td><td>8</td><td>13</td><td>18</td><td>1821</td><td>2級</td><td>55</td><td>0.291</td><td>0.436</td><td>0.327</td><td>2.600</td></tr>
+	<tr><td>シヴァ</td><td>12</td><td>14</td><td>12</td><td>17</td><td>1872</td><td>2級</td><td>55</td><td>0.218</td><td>0.473</td><td>0.309</td><td>2.618</td></tr>
+	<tr><td>よなは</td><td>14</td><td>12</td><td>15</td><td>12</td><td>2070</td><td>初段</td><td>53</td><td>0.264</td><td>0.491</td><td>0.226</td><td>2.472</td></tr>
+	<tr><td>緒方プロ</td><td>12</td><td>12</td><td>10</td><td>7</td><td>2214</td><td>3段</td><td>41</td><td>0.293</td><td>0.585</td><td>0.171</td><td>2.293</td></tr>
+	<tr><td>吉野</td><td>9</td><td>13</td><td>11</td><td>8</td><td>2140</td><td>2段</td><td>41</td><td>0.220</td><td>0.537</td><td>0.195</td><td>2.439</td></tr>
+	<tr><td>コウノ</td><td>4</td><td>14</td><td>11</td><td>7</td><td>1980</td><td>1級</td><td>36</td><td>0.111</td><td>0.500</td><td>0.194</td><td>2.583</td></tr>
+	<tr><td>ながたに</td><td>11</td><td>5</td><td>11</td><td>9</td><td>1827</td><td>2級</td><td>36</td><td>0.306</td><td>0.444</td><td>0.250</td><td>2.500</td></tr>
+	<tr><td>あっこ</td><td>7</td><td>9</td><td>6</td><td>12</td><td>2292</td><td>3段</td><td>34</td><td>0.206</td><td>0.471</td><td>0.353</td><td>2.676</td></tr>
+	<tr><td>みーちゃん</td><td>6</td><td>10</td><td>7</td><td>8</td><td>1736</td><td>3級</td><td>31</td><td>0.194</td><td>0.516</td><td>0.258</td><td>2.548</td></tr>
+	<tr><td>泉</td><td>8</td><td>8</td><td>5</td><td>5</td><td>2125</td><td>2段</td><td>26</td><td>0.308</td><td>0.615</td><td>0.192</td><td>2.269</td></tr>
+	<tr><td>ナオ</td><td>5</td><td>4</td><td>7</td><td>9</td><td>1862</td><td>2級</td><td>25</td><td>0.200</td><td>0.360</td><td>0.360</td><td>2.800</td></tr>
+	<tr><td>薬師寺ｊ</td><td>4</td><td>7</td><td>6</td><td>6</td><td>1960</td><td>1級</td><td>23</td><td>0.174</td><td>0.478</td><td>0.261</td><td>2.609</td></tr>
+	<tr><td>つつみ</td><td>5</td><td>3</td><td>10</td><td>5</td><td>2053</td><td>初段</td><td>23</td><td>0.217</td><td>0.348</td><td>0.217</td><td>2.652</td></tr>
+	<tr><td>りょうや</td><td>5</td><td>9</td><td>5</td><td>3</td><td>2109</td><td>2段</td><td>22</td><td>0.227</td><td>0.636</td><td>0.136</td><td>2.273</td></tr>
+	<tr><td>まつうら</td><td>5</td><td>6</td><td>4</td><td>6</td><td>1994</td><td>1級</td><td>21</td><td>0.238</td><td>0.524</td><td>0.286</td><td>2.524</td></tr>
         
    </tbody>
 </table>
