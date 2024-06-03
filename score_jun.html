@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024年6月成績</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    color: #2a2a72;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+    margin-top: 20px;
+  }
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  th {
+    background-color: #4a69bd;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  th.sortable:hover {
+    background-color: #6574cd;
+  }
+  .sorted-asc::after {
+    content: " ▲";
+  }
+  .sorted-desc::after {
+    content: " ▼";
+  }
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  tr:hover {
+    background-color: #e9ecef;
+  }
+  @media (max-width: 600px) {
+    th, td {
+      padding: 10px;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<h1>2024年6月成績</h1>
+<input type="text" id="searchInput" onkeyup="searchName()" placeholder="名前で検索..." style="margin-bottom: 10px; width: 100%; padding: 8px;">
+
+<table id="resultsTable">
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th onclick="sortTable(1)" class="sortable">１位</th>
+      <th onclick="sortTable(2)" class="sortable">２位</th>
+      <th onclick="sortTable(3)" class="sortable">３位</th>
+      <th onclick="sortTable(4)" class="sortable">ラス</th>
+      <th onclick="sortTable(5)" class="sortable">レート</th>
+      <th>段位</th>
+	<th>最高レート</th>    
+      <th onclick="sortTable(8)" class="sortable">打回数</th>
+      <th onclick="sortTable(9)" class="sortable">TOP率</th>
+      <th onclick="sortTable(10)" class="sortable">連帯率</th>
+      <th onclick="sortTable(11)" class="sortable">ラス率</th>
+      <th onclick="sortTable(12)" class="sortable">平均着順</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- テーブルデータをここに挿入 -->
+
+	<tr><td>樋口</td><td>3</td><td>1</td><td>2</td><td>2</td><td>3241</td><td>ぽっぽ神</td><td>3287</td><td>8</td><td>0.375</td><td>0.500</td><td>0.250</td><td>2.375</td></tr>
+	<tr><td>川口</td><td>7</td><td>2</td><td>3</td><td>5</td><td>2572</td><td>6段</td><td>2666</td><td>17</td><td>0.412</td><td>0.529</td><td>0.294</td><td>2.353</td></tr>
+	<tr><td>橋本</td><td>2</td><td>3</td><td>2</td><td>3</td><td>2570</td><td>6段</td><td>2782</td><td>10</td><td>0.200</td><td>0.500</td><td>0.300</td><td>2.600</td></tr>
+	<tr><td>ワタナベ</td><td>1</td><td>1</td><td>0</td><td>3</td><td>2517</td><td>6段</td><td>2691</td><td>5</td><td>0.200</td><td>0.400</td><td>0.600</td><td>3.000</td></tr>
+	<tr><td>久保</td><td>5</td><td>2</td><td>4</td><td>3</td><td>2491</td><td>5段</td><td>2495</td><td>14</td><td>0.357</td><td>0.500</td><td>0.214</td><td>2.357</td></tr>
+	<tr><td>しのはら</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2381</td><td>4段</td><td>2633</td><td>2</td><td>0.000</td><td>0.000</td><td>0.500</td><td>3.500</td></tr>
+	<tr><td>ぺいぺい</td><td>2</td><td>1</td><td>0</td><td>1</td><td>2304</td><td>4段</td><td>2402</td><td>4</td><td>0.500</td><td>0.750</td><td>0.250</td><td>2.000</td></tr>
+	<tr><td>ごんべ</td><td>1</td><td>0</td><td>2</td><td>4</td><td>2299</td><td>3段</td><td>2458</td><td>7</td><td>0.143</td><td>0.143</td><td>0.571</td><td>3.286</td></tr>
+	<tr><td>カボス</td><td>3</td><td>0</td><td>0</td><td>1</td><td>2198</td><td>2段</td><td>2198</td><td>4</td><td>0.750</td><td>0.750</td><td>0.250</td><td>1.750</td></tr>
+	<tr><td>まつお</td><td>1</td><td>1</td><td>0</td><td>1</td><td>2170</td><td>2段</td><td>2200</td><td>3</td><td>0.333</td><td>0.667</td><td>0.333</td><td>2.333</td></tr>
+	<tr><td>イワイ</td><td>0</td><td>5</td><td>3</td><td>2</td><td>2128</td><td>2段</td><td>2196</td><td>10</td><td>0.000</td><td>0.500</td><td>0.200</td><td>2.700</td></tr>
+	<tr><td>薬師寺</td><td>2</td><td>1</td><td>4</td><td>1</td><td>2092</td><td>初段</td><td>2092</td><td>8</td><td>0.250</td><td>0.375</td><td>0.125</td><td>2.500</td></tr>
+	<tr><td>まつうら</td><td>4</td><td>0</td><td>2</td><td>2</td><td>2080</td><td>初段</td><td>2080</td><td>8</td><td>0.500</td><td>0.500</td><td>0.250</td><td>2.250</td></tr>
+	<tr><td>風祭</td><td>2</td><td>2</td><td>1</td><td>0</td><td>2064</td><td>初段</td><td>2064</td><td>5</td><td>0.400</td><td>0.800</td><td>0.000</td><td>1.800</td></tr>
+	<tr><td>花</td><td>0</td><td>0</td><td>1</td><td>2</td><td>2057</td><td>初段</td><td>2157</td><td>3</td><td>0.000</td><td>0.000</td><td>0.667</td><td>3.667</td></tr>
+	<tr><td>かず</td><td>1</td><td>5</td><td>0</td><td>0</td><td>2014</td><td>初段</td><td>2014</td><td>6</td><td>0.167</td><td>1.000</td><td>0.000</td><td>1.833</td></tr>
+	<tr><td>たかちゃん</td><td>1</td><td>3</td><td>0</td><td>3</td><td>2006</td><td>初段</td><td>2279</td><td>7</td><td>0.143</td><td>0.571</td><td>0.429</td><td>2.714</td></tr>
+	<tr><td>よしむら</td><td>0</td><td>2</td><td>1</td><td>0</td><td>1931</td><td>1級</td><td>2000</td><td>3</td><td>0.000</td><td>0.667</td><td>0.000</td><td>2.333</td></tr>
+	<tr><td>カズー</td><td>0</td><td>2</td><td>1</td><td>0</td><td>1896</td><td>2級</td><td>2000</td><td>3</td><td>0.000</td><td>0.667</td><td>0.000</td><td>2.333</td></tr>
+	<tr><td>ゴトウ</td><td>1</td><td>2</td><td>4</td><td>1</td><td>1841</td><td>2級</td><td>2200</td><td>8</td><td>0.125</td><td>0.375</td><td>0.125</td><td>2.625</td></tr>
+	<tr><td>山松</td><td>2</td><td>2</td><td>6</td><td>1</td><td>1753</td><td>3級</td><td>2000</td><td>11</td><td>0.182</td><td>0.364</td><td>0.091</td><td>2.545</td></tr>
+	<tr><td>こたろー</td><td>0</td><td>0</td><td>2</td><td>2</td><td>1585</td><td>5級</td><td>2000</td><td>4</td><td>0.000</td><td>0.000</td><td>0.500</td><td>3.500</td></tr>
+	<tr><td>安達</td><td>1</td><td>2</td><td>0</td><td>2</td><td>1571</td><td>5級</td><td>2000</td><td>5</td><td>0.200</td><td>0.600</td><td>0.400</td><td>2.600</td></tr>
+	<tr><td>かんつ</td><td>1</td><td>3</td><td>1</td><td>0</td><td>1565</td><td>5級</td><td>2000</td><td>5</td><td>0.200</td><td>0.800</td><td>0.000</td><td>2.000</td></tr>
+	  
+	</tbody>
+</table>
+
+<script>
+function sortTable(column) {
+  var table, rows, switching, i, x, y, xValue, yValue, shouldSwitch, dir = "asc", switchcount = 0;
+  table = document.getElementById("resultsTable");
+  removingSortIndicators(column);
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[column];
+      y = rows[i + 1].getElementsByTagName("TD")[column];
+
+      xValue = parseFloat(x.innerHTML) || x.innerHTML.toLowerCase();
+      yValue = parseFloat(y.innerHTML) || y.innerHTML.toLowerCase();
+
+      if ((dir == "asc" && xValue > yValue) || (dir == "desc" && xValue < yValue)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+  updateSortIndicator(column, dir);
+}
+
+function updateSortIndicator(column, dir) {
+  var header = document.querySelectorAll('th')[column];
+  header.classList.add(dir == "asc" ? "sorted-asc" : "sorted-desc");
+}
+
+function removingSortIndicators(exceptColumn) {
+  var headers = document.querySelectorAll('th');
+  headers.forEach(function(header, idx) {
+    if (idx !== exceptColumn) {
+      header.classList.remove("sorted-asc", "sorted-desc");
+    }
+  });
+}
+
+function searchName() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("resultsTable");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0]; // Column 0 is name
+    if (td) {
+      if (td.textContent.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
